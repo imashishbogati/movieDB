@@ -25,6 +25,10 @@
 		0BBBF7C728ED895A003EEE17 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7C628ED895A003EEE17 /* HomeFactory.swift */; };
 		0BBBF7C928ED898C003EEE17 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7C828ED898C003EEE17 /* AppConfiguration.swift */; };
 		0BBBF7CB28ED8A60003EEE17 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7CA28ED8A60003EEE17 /* HomeViewControllerTests.swift */; };
+		0BBBF7CD28ED9496003EEE17 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7CC28ED9496003EEE17 /* HomeViewModel.swift */; };
+		0BBBF7D028ED94B5003EEE17 /* HomeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7CF28ED94B5003EEE17 /* HomeInterfaces.swift */; };
+		0BBBF7D228ED95F5003EEE17 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7D128ED95F5003EEE17 /* MovieListViewModel.swift */; };
+		0BBBF7D428ED98D8003EEE17 /* TestListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7D328ED98D8003EEE17 /* TestListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,10 @@
 		0BBBF7C628ED895A003EEE17 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 		0BBBF7C828ED898C003EEE17 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		0BBBF7CA28ED8A60003EEE17 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
+		0BBBF7CC28ED9496003EEE17 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		0BBBF7CF28ED94B5003EEE17 /* HomeInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterfaces.swift; sourceTree = "<group>"; };
+		0BBBF7D128ED95F5003EEE17 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
+		0BBBF7D328ED98D8003EEE17 /* TestListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				0BBBF7CA28ED8A60003EEE17 /* HomeViewControllerTests.swift */,
+				0BBBF7D328ED98D8003EEE17 /* TestListView.swift */,
 			);
 			path = MovieDBTests;
 			sourceTree = "<group>";
@@ -214,6 +223,7 @@
 		0BBBF7A728ED8654003EEE17 /* Presentations */ = {
 			isa = PBXGroup;
 			children = (
+				0BBBF7CE28ED94A5003EEE17 /* Interface */,
 				0BBBF7C528ED894B003EEE17 /* Factory */,
 				0BBBF7AA28ED866F003EEE17 /* ViewModels */,
 				0BBBF7A928ED8669003EEE17 /* Views */,
@@ -242,6 +252,8 @@
 		0BBBF7AA28ED866F003EEE17 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0BBBF7D128ED95F5003EEE17 /* MovieListViewModel.swift */,
+				0BBBF7CC28ED9496003EEE17 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -280,6 +292,14 @@
 				0BBBF7C628ED895A003EEE17 /* HomeFactory.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		0BBBF7CE28ED94A5003EEE17 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				0BBBF7CF28ED94B5003EEE17 /* HomeInterfaces.swift */,
+			);
+			path = Interface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BBBF7BB28ED871F003EEE17 /* Common.swift in Sources */,
+				0BBBF7D028ED94B5003EEE17 /* HomeInterfaces.swift in Sources */,
 				0BBBF7B328ED86F0003EEE17 /* ListCollectionViewCell.swift in Sources */,
 				0BBBF7BD28ED871F003EEE17 /* AnchoredConstraints.swift in Sources */,
 				0BBBF7B128ED86F0003EEE17 /* ListView.swift in Sources */,
@@ -422,6 +443,8 @@
 				0BBBF7BE28ED871F003EEE17 /* UIView+Layout.swift in Sources */,
 				0BBBF7C128ED8868003EEE17 /* UIViewController+Extensions.swift in Sources */,
 				0BBBF77028ED8531003EEE17 /* AppDelegate.swift in Sources */,
+				0BBBF7CD28ED9496003EEE17 /* HomeViewModel.swift in Sources */,
+				0BBBF7D228ED95F5003EEE17 /* MovieListViewModel.swift in Sources */,
 				0BBBF77228ED8531003EEE17 /* SceneDelegate.swift in Sources */,
 				0BBBF7AC28ED867E003EEE17 /* HomeViewController.swift in Sources */,
 				0BBBF7BC28ED871F003EEE17 /* ColorCompatibility.swift in Sources */,
@@ -433,6 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BBBF7D428ED98D8003EEE17 /* TestListView.swift in Sources */,
 				0BBBF7CB28ED8A60003EEE17 /* HomeViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

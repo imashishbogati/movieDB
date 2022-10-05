@@ -46,6 +46,9 @@ class ListView: UIView {
         return view
     }()
     
+    // MARK: - Ivars
+    var viewModel: MovieListViewModelInterface = MovieListViewModel()
+    private var listType: ListType = .popular
 
     // MARK: - Life Cycle
     override init(frame: CGRect) {
@@ -64,7 +67,7 @@ class ListView: UIView {
     }
     
     private func loadData() {
-        
+        headingLabel.text =  viewModel.listTitle(list: listType)
     }
     
     private func setupHierarchy() {
@@ -90,6 +93,12 @@ class ListView: UIView {
                               bottom: bottomAnchor,
                               trailing: trailingAnchor,
                               padding: .init(top: 10, left: 0, bottom: 0, right: 0))
+    }
+    
+    // MARK: - Public
+    func listType(listType: ListType) {
+        self.listType = listType
+        loadData()
     }
 }
 

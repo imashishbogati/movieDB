@@ -14,14 +14,17 @@ class HomeViewController: UIViewController {
     private let scrollView = UIScrollView()
     private let contentView = UIView()
     private var searchController: UISearchController?
+    var homeViewModel: HomeViewModelInterface?
     
     lazy var popularMovieListView: ListView = {
         let view = ListView()
+        view.listType(listType: .popular)
         return view
     }()
     
     lazy var trendingMovieListView: ListView = {
         let view = ListView()
+        view.listType(listType: .trending)
         return view
     }()
     

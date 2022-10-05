@@ -20,6 +20,7 @@ final class HomeViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.title, "Home", "Navigation Title")
         XCTAssertEqual(sut.navigationItem.rightBarButtonItems?.count, 1, "Navigation right bar button")
     }
+    
 }
 
 private func makeSut() throws -> HomeViewController {
