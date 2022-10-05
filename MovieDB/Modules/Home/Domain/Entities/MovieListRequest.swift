@@ -11,5 +11,4 @@ import Foundation
 
 struct MovieListRequest {
     var page: String
-    var listType: ListType = .popular
 }

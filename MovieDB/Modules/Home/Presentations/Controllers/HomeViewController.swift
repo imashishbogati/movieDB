@@ -18,12 +18,16 @@ class HomeViewController: UIViewController {
     
     lazy var popularMovieListView: ListView = {
         let view = ListView()
+        view.viewModel = MovieListViewModel(useCase: MovieListUseCase(page: "1",
+                                                                      listType: .popular))
         view.listType(listType: .popular)
         return view
     }()
     
     lazy var trendingMovieListView: ListView = {
         let view = ListView()
+        view.viewModel = MovieListViewModel(useCase: MovieListUseCase(page: "1",
+                                                                      listType: .trending))
         view.listType(listType: .trending)
         return view
     }()

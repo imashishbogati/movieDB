@@ -7,9 +7,9 @@
 
 import Foundation
 
-enum ListType {
-    case popular
-    case trending
+enum ListType: String {
+    case popular = "movie/popular"
+    case trending = "trending/movie/day"
 }
 
 protocol HomeViewModelInterface {

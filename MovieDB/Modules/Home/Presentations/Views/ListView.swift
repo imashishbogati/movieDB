@@ -47,7 +47,8 @@ class ListView: UIView {
     }()
     
     // MARK: - Ivars
-    var viewModel: MovieListViewModelInterface = MovieListViewModel()
+    var viewModel: MovieListViewModelInterface?
+    private var movieLists: MovieListResponse?
     private var listType: ListType = .popular
 
     // MARK: - Life Cycle
@@ -67,8 +68,23 @@ class ListView: UIView {
     }
     
     private func loadData() {
-        headingLabel.text =  viewModel.listTitle(list: listType)
+        headingLabel.text =  viewModel?.listTitle(list: listType)
+        let request = MovieListRequest(page: "1")
+        viewModel?.getMovies(request: request, completion: { response in
+            switch response {
+            case .success(let movieList):
+                self.movieLists = movieList
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+                
+            case .failure(let failure):
+                print(failure.localizedDescription)
+            }
+        })
     }
+    
+
     
     private func setupHierarchy() {
         addSubview(headingLabel)
@@ -105,13 +121,14 @@ class ListView: UIView {
 extension ListView: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return movieLists?.results.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ListCollectionViewCell.reuseIdentifier, for: indexPath) as? ListCollectionViewCell else {
             fatalError()
         }
+        cell.titleLabel.text = movieLists?.results[indexPath.item].title ?? ""
         return cell
     }
     

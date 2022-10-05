@@ -18,6 +18,14 @@ final class MovieListWorker: MovieListWokerInterface {
     func getMovies(request: URLRequest,
                    completion: @escaping (Result<Data?, NetworkError>) -> Void) {
         networkService.dataLoader.loadData(using: request) { data, response, error in
+            
+            if let response = response as? HTTPURLResponse {
+                let statusCode = response.statusCode
+                if statusCode != 200 {
+                    completion(.failure(.requestError(.invalidRequest(request))))
+                }
+            }
+            
             guard let data = data else {
                 completion(.failure(.noData))
                 return
@@ -27,12 +35,7 @@ final class MovieListWorker: MovieListWokerInterface {
                 completion(.failure(error))
             }
             
-            if let response = response as? HTTPURLResponse {
-                let statusCode = response.statusCode
-                if statusCode != 200 {
-                    completion(.failure(.requestError(.invalidRequest(request))))
-                }
-            }
+            
             
             completion(.success(data))
         }
