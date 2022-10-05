@@ -18,6 +18,8 @@ protocol HomeViewModelInterface {
 
 protocol MovieListViewModelInterface {
     func listTitle(list: ListType) -> String
+    func getMovies(request: MovieListRequest,
+                   completion: @escaping (Result<MovieListResponse, NetworkError>) -> Void)
 }
 
 

@@ -14,16 +14,8 @@ final class TestListView: XCTestCase {
         _ = try makeSut()
     }
     
-    func test_headLabelWithDummyViewModel_shouldBeEmptyString() throws {
+    func test_headLabelWithFakesViewModel_shouldBeTest() throws {
         let sut = try makeSut()
-        sut.listType(listType: .popular)
-        XCTAssertEqual(sut.headingLabel.text, "")
-    }
-    
-    func test_headLabelWithFakesViewModel_shouldBePopular() throws {
-        let sut = try makeSut()
-        let viewModel = ListViewModelFakes()
-        sut.viewModel = viewModel
         sut.listType(listType: .popular)
         XCTAssertEqual(sut.headingLabel.text, "test")
     }
@@ -51,17 +43,9 @@ extension ListView {
 
 private func makeSut() throws -> ListView {
     let listView = ListView()
-    listView.viewModel = ListViewModelDummy()
+    listView.viewModel = ListViewModelFakes()
     return try XCTUnwrap(listView)
 }
-
-
-private class ListViewModelDummy: MovieListViewModelInterface {
-    func listTitle(list: MovieDB.ListType) -> String {
-        return ""
-    }
-}
-
 
 private class ListViewModelFakes: MovieListViewModelInterface {
     func listTitle(list: MovieDB.ListType) -> String {
