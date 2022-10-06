@@ -14,7 +14,6 @@ class HomeViewController: UIViewController {
     private let scrollView = UIScrollView()
     private let contentView = UIView()
     private var searchController: UISearchController?
-    var homeViewModel: HomeViewModelInterface?
     
     lazy var popularMovieListView: ListView = {
         let view = ListView()

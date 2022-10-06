@@ -70,20 +70,19 @@ class ListView: UIView {
     private func loadData() {
         headingLabel.text =  viewModel?.listTitle(list: listType)
         let request = MovieListRequest(page: "1")
-        viewModel?.getMovies(request: request, completion: { response in
+        viewModel?.getMovies(request: request, completion: { [weak self] response in
+            guard let self = self else {
+                return
+            }
             switch response {
             case .success(let movieList):
                 self.movieLists = movieList
-                DispatchQueue.main.async {
-                    self.collectionView.reloadData()
-                }
-                
+                self.collectionView.reloadData()
             case .failure(let failure):
-                print(failure.localizedDescription)
+                self.window?.rootViewController?.presentAlert(title: "Failed", message: failure.localizedDescription)
             }
         })
     }
-    
 
     
     private func setupHierarchy() {

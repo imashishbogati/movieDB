@@ -25,7 +25,6 @@
 		0BBBF7C728ED895A003EEE17 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7C628ED895A003EEE17 /* HomeFactory.swift */; };
 		0BBBF7C928ED898C003EEE17 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7C828ED898C003EEE17 /* AppConfiguration.swift */; };
 		0BBBF7CB28ED8A60003EEE17 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7CA28ED8A60003EEE17 /* HomeViewControllerTests.swift */; };
-		0BBBF7CD28ED9496003EEE17 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7CC28ED9496003EEE17 /* HomeViewModel.swift */; };
 		0BBBF7D028ED94B5003EEE17 /* HomeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7CF28ED94B5003EEE17 /* HomeInterfaces.swift */; };
 		0BBBF7D228ED95F5003EEE17 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7D128ED95F5003EEE17 /* MovieListViewModel.swift */; };
 		0BBBF7D428ED98D8003EEE17 /* TestListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7D328ED98D8003EEE17 /* TestListView.swift */; };
@@ -43,6 +42,12 @@
 		0BBBF7F528EDCF77003EEE17 /* MovieListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7F428EDCF77003EEE17 /* MovieListWorker.swift */; };
 		0BBBF7F828EDCF96003EEE17 /* MovieListWorkerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7F728EDCF96003EEE17 /* MovieListWorkerInterface.swift */; };
 		0BBBF7FD28EDD3BF003EEE17 /* MovieListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7FC28EDD3BF003EEE17 /* MovieListUseCase.swift */; };
+		0BBBF80028EEB12C003EEE17 /* DispatchHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7FF28EEB12C003EEE17 /* DispatchHelpers.swift */; };
+		0BBBF80528EEB6F2003EEE17 /* ListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF80428EEB6F2003EEE17 /* ListType.swift */; };
+		0BBBF80828EEC538003EEE17 /* AlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF80728EEC538003EEE17 /* AlertControllerFactory.swift */; };
+		0BBBF80A28EEC725003EEE17 /* ListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF80928EEC725003EEE17 /* ListViewProtocol.swift */; };
+		0BBBF80D28EEC9AD003EEE17 /* ViewControllerPresentationSpy.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BBBF80C28EEC9AD003EEE17 /* ViewControllerPresentationSpy.xcframework */; };
+		0BBBF81028EEC9D5003EEE17 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF80F28EEC9D5003EEE17 /* TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +90,6 @@
 		0BBBF7C628ED895A003EEE17 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 		0BBBF7C828ED898C003EEE17 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		0BBBF7CA28ED8A60003EEE17 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
-		0BBBF7CC28ED9496003EEE17 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		0BBBF7CF28ED94B5003EEE17 /* HomeInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterfaces.swift; sourceTree = "<group>"; };
 		0BBBF7D128ED95F5003EEE17 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
 		0BBBF7D328ED98D8003EEE17 /* TestListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestListView.swift; sourceTree = "<group>"; };
@@ -103,6 +107,12 @@
 		0BBBF7F428EDCF77003EEE17 /* MovieListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListWorker.swift; sourceTree = "<group>"; };
 		0BBBF7F728EDCF96003EEE17 /* MovieListWorkerInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListWorkerInterface.swift; sourceTree = "<group>"; };
 		0BBBF7FC28EDD3BF003EEE17 /* MovieListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListUseCase.swift; sourceTree = "<group>"; };
+		0BBBF7FF28EEB12C003EEE17 /* DispatchHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchHelpers.swift; sourceTree = "<group>"; };
+		0BBBF80428EEB6F2003EEE17 /* ListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListType.swift; sourceTree = "<group>"; };
+		0BBBF80728EEC538003EEE17 /* AlertControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerFactory.swift; sourceTree = "<group>"; };
+		0BBBF80928EEC725003EEE17 /* ListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewProtocol.swift; sourceTree = "<group>"; };
+		0BBBF80C28EEC9AD003EEE17 /* ViewControllerPresentationSpy.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ViewControllerPresentationSpy.xcframework; path = "../../../UnitTestingHelperLibary/ViewControllerPresentationSpy-6.1.0/ViewControllerPresentationSpy.xcframework"; sourceTree = "<group>"; };
+		0BBBF80F28EEC9D5003EEE17 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BBBF80D28EEC9AD003EEE17 /* ViewControllerPresentationSpy.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +148,7 @@
 				0BBBF78528ED8532003EEE17 /* MovieDBTests */,
 				0BBBF78F28ED8532003EEE17 /* MovieDBUITests */,
 				0BBBF76D28ED8531003EEE17 /* Products */,
+				0BBBF80B28EEC9AD003EEE17 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +176,7 @@
 		0BBBF78528ED8532003EEE17 /* MovieDBTests */ = {
 			isa = PBXGroup;
 			children = (
+				0BBBF80E28EEC9CC003EEE17 /* TestHelpers */,
 				0BBBF7CA28ED8A60003EEE17 /* HomeViewControllerTests.swift */,
 				0BBBF7D328ED98D8003EEE17 /* TestListView.swift */,
 			);
@@ -192,6 +205,8 @@
 		0BBBF7A028ED85DA003EEE17 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0BBBF80628EEC52C003EEE17 /* Factory */,
+				0BBBF7FE28EEB0DB003EEE17 /* DispatchHelpers */,
 				0BBBF7E828EDCDD2003EEE17 /* EndPoints */,
 				0BBBF7D728EDCCC9003EEE17 /* NetworkHelper */,
 				0BBBF7BF28ED8856003EEE17 /* Extensions */,
@@ -288,7 +303,6 @@
 			isa = PBXGroup;
 			children = (
 				0BBBF7D128ED95F5003EEE17 /* MovieListViewModel.swift */,
-				0BBBF7CC28ED9496003EEE17 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -333,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				0BBBF7CF28ED94B5003EEE17 /* HomeInterfaces.swift */,
+				0BBBF80928EEC725003EEE17 /* ListViewProtocol.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -388,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				0BBBF7E928EDCDDD003EEE17 /* MovieEndPoints.swift */,
+				0BBBF80428EEB6F2003EEE17 /* ListType.swift */,
 			);
 			path = EndPoints;
 			sourceTree = "<group>";
@@ -406,6 +422,38 @@
 				0BBBF7F728EDCF96003EEE17 /* MovieListWorkerInterface.swift */,
 			);
 			path = Interface;
+			sourceTree = "<group>";
+		};
+		0BBBF7FE28EEB0DB003EEE17 /* DispatchHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				0BBBF7FF28EEB12C003EEE17 /* DispatchHelpers.swift */,
+			);
+			path = DispatchHelpers;
+			sourceTree = "<group>";
+		};
+		0BBBF80628EEC52C003EEE17 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				0BBBF80728EEC538003EEE17 /* AlertControllerFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		0BBBF80B28EEC9AD003EEE17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BBBF80C28EEC9AD003EEE17 /* ViewControllerPresentationSpy.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0BBBF80E28EEC9CC003EEE17 /* TestHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				0BBBF80F28EEC9D5003EEE17 /* TestHelpers.swift */,
+			);
+			path = TestHelpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -550,6 +598,8 @@
 				0BBBF7FD28EDD3BF003EEE17 /* MovieListUseCase.swift in Sources */,
 				0BBBF7EC28EDCECA003EEE17 /* MovieListRequest.swift in Sources */,
 				0BBBF7B128ED86F0003EEE17 /* ListView.swift in Sources */,
+				0BBBF80828EEC538003EEE17 /* AlertControllerFactory.swift in Sources */,
+				0BBBF80528EEB6F2003EEE17 /* ListType.swift in Sources */,
 				0BBBF7E328EDCCCA003EEE17 /* DecoderHelper.swift in Sources */,
 				0BBBF7B228ED86F0003EEE17 /* ListBaseCollectionViewCell.swift in Sources */,
 				0BBBF7E628EDCCCA003EEE17 /* NetworkLoader.swift in Sources */,
@@ -561,10 +611,11 @@
 				0BBBF7F828EDCF96003EEE17 /* MovieListWorkerInterface.swift in Sources */,
 				0BBBF7F528EDCF77003EEE17 /* MovieListWorker.swift in Sources */,
 				0BBBF77028ED8531003EEE17 /* AppDelegate.swift in Sources */,
-				0BBBF7CD28ED9496003EEE17 /* HomeViewModel.swift in Sources */,
 				0BBBF7E528EDCCCA003EEE17 /* NetworkError.swift in Sources */,
+				0BBBF80A28EEC725003EEE17 /* ListViewProtocol.swift in Sources */,
 				0BBBF7D228ED95F5003EEE17 /* MovieListViewModel.swift in Sources */,
 				0BBBF77228ED8531003EEE17 /* SceneDelegate.swift in Sources */,
+				0BBBF80028EEB12C003EEE17 /* DispatchHelpers.swift in Sources */,
 				0BBBF7AC28ED867E003EEE17 /* HomeViewController.swift in Sources */,
 				0BBBF7E728EDCCCA003EEE17 /* EndPoint.swift in Sources */,
 				0BBBF7BC28ED871F003EEE17 /* ColorCompatibility.swift in Sources */,
@@ -578,6 +629,7 @@
 			files = (
 				0BBBF7D428ED98D8003EEE17 /* TestListView.swift in Sources */,
 				0BBBF7CB28ED8A60003EEE17 /* HomeViewControllerTests.swift in Sources */,
+				0BBBF81028EEC9D5003EEE17 /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,12 +30,16 @@ final class MovieListViewModel: MovieListViewModelInterface {
         useCase.getMovies(request: request) { response in
             switch response {
             case .success(let data):
-                completion(.success(data))
+                guarenteeMainThread {
+                    completion(.success(data))
+                }
+                
             case .failure(let failure):
-                completion(.failure(failure))
+                guarenteeMainThread {
+                    completion(.failure(failure))
+                }
+                
             }
         }
     }
-    
-    
 }
