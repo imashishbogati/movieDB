@@ -57,5 +57,18 @@ class ListCollectionViewCell: ListBaseCollectionViewCell {
     }
     
     // MARK: - Public Methods
-    
+    func loadData(model: MovieListResponse?, index: Int) {
+        guard let model = model else {
+            return
+        }
+        let result = model.results[index]
+        if !model.results.isEmpty {
+            titleLabel.text = result.original_title ?? ""
+            posterImageView.setImage(url: result.poster_path ?? "") { [weak self] status in
+                if status == false {
+                    self?.posterImageView.image = UIImage(named: "empty-profile")
+                }
+            }
+        }
+    }
 }

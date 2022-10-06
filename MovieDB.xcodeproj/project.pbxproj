@@ -48,6 +48,8 @@
 		0BBBF80A28EEC725003EEE17 /* ListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF80928EEC725003EEE17 /* ListViewProtocol.swift */; };
 		0BBBF80D28EEC9AD003EEE17 /* ViewControllerPresentationSpy.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BBBF80C28EEC9AD003EEE17 /* ViewControllerPresentationSpy.xcframework */; };
 		0BBBF81028EEC9D5003EEE17 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF80F28EEC9D5003EEE17 /* TestHelpers.swift */; };
+		0BBBF81328EF2AC8003EEE17 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0BBBF81228EF2AC8003EEE17 /* SDWebImage */; };
+		0BBBF81528EF2ADE003EEE17 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF81428EF2ADE003EEE17 /* UIImageView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,7 @@
 		0BBBF80928EEC725003EEE17 /* ListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewProtocol.swift; sourceTree = "<group>"; };
 		0BBBF80C28EEC9AD003EEE17 /* ViewControllerPresentationSpy.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ViewControllerPresentationSpy.xcframework; path = "../../../UnitTestingHelperLibary/ViewControllerPresentationSpy-6.1.0/ViewControllerPresentationSpy.xcframework"; sourceTree = "<group>"; };
 		0BBBF80F28EEC9D5003EEE17 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		0BBBF81428EF2ADE003EEE17 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BBBF81328EF2AC8003EEE17 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				0BBBF7C028ED8868003EEE17 /* UIViewController+Extensions.swift */,
+				0BBBF81428EF2ADE003EEE17 /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -472,6 +477,9 @@
 			dependencies = (
 			);
 			name = MovieDB;
+			packageProductDependencies = (
+				0BBBF81228EF2AC8003EEE17 /* SDWebImage */,
+			);
 			productName = MovieDB;
 			productReference = 0BBBF76C28ED8531003EEE17 /* MovieDB.app */;
 			productType = "com.apple.product-type.application";
@@ -545,6 +553,9 @@
 				Base,
 			);
 			mainGroup = 0BBBF76328ED8531003EEE17;
+			packageReferences = (
+				0BBBF81128EF2AC8003EEE17 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 0BBBF76D28ED8531003EEE17 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -591,6 +602,7 @@
 				0BBBF7E128EDCCCA003EEE17 /* URLSession+NetworkLoader.swift in Sources */,
 				0BBBF7D028ED94B5003EEE17 /* HomeInterfaces.swift in Sources */,
 				0BBBF7EE28EDCEF1003EEE17 /* MovieListResponse.swift in Sources */,
+				0BBBF81528EF2ADE003EEE17 /* UIImageView+Extensions.swift in Sources */,
 				0BBBF7B328ED86F0003EEE17 /* ListCollectionViewCell.swift in Sources */,
 				0BBBF7E228EDCCCA003EEE17 /* NetworkService.swift in Sources */,
 				0BBBF7BD28ED871F003EEE17 /* AnchoredConstraints.swift in Sources */,
@@ -968,6 +980,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0BBBF81128EF2AC8003EEE17 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0BBBF81228EF2AC8003EEE17 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0BBBF81128EF2AC8003EEE17 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0BBBF76428ED8531003EEE17 /* Project object */;
 }

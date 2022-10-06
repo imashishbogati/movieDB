@@ -127,7 +127,7 @@ extension MovieListView: UICollectionViewDelegate, UICollectionViewDelegateFlowL
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ListCollectionViewCell.reuseIdentifier, for: indexPath) as? ListCollectionViewCell else {
             fatalError()
         }
-        cell.titleLabel.text = movieLists?.results[indexPath.item].title ?? ""
+        cell.loadData(model: movieLists, index: indexPath.item)
         return cell
     }
     
