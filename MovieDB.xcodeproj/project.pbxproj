@@ -14,7 +14,7 @@
 		0BBBF79128ED8532003EEE17 /* MovieDBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF79028ED8532003EEE17 /* MovieDBUITests.swift */; };
 		0BBBF79328ED8532003EEE17 /* MovieDBUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF79228ED8532003EEE17 /* MovieDBUITestsLaunchTests.swift */; };
 		0BBBF7AC28ED867E003EEE17 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7AB28ED867E003EEE17 /* HomeViewController.swift */; };
-		0BBBF7B128ED86F0003EEE17 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7AD28ED86F0003EEE17 /* ListView.swift */; };
+		0BBBF7B128ED86F0003EEE17 /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7AD28ED86F0003EEE17 /* MovieListView.swift */; };
 		0BBBF7B228ED86F0003EEE17 /* ListBaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7AF28ED86F0003EEE17 /* ListBaseCollectionViewCell.swift */; };
 		0BBBF7B328ED86F0003EEE17 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7B028ED86F0003EEE17 /* ListCollectionViewCell.swift */; };
 		0BBBF7BB28ED871F003EEE17 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7B628ED871F003EEE17 /* Common.swift */; };
@@ -43,7 +43,7 @@
 		0BBBF7F828EDCF96003EEE17 /* MovieListWorkerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7F728EDCF96003EEE17 /* MovieListWorkerInterface.swift */; };
 		0BBBF7FD28EDD3BF003EEE17 /* MovieListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7FC28EDD3BF003EEE17 /* MovieListUseCase.swift */; };
 		0BBBF80028EEB12C003EEE17 /* DispatchHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7FF28EEB12C003EEE17 /* DispatchHelpers.swift */; };
-		0BBBF80528EEB6F2003EEE17 /* ListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF80428EEB6F2003EEE17 /* ListType.swift */; };
+		0BBBF80528EEB6F2003EEE17 /* MovieListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF80428EEB6F2003EEE17 /* MovieListType.swift */; };
 		0BBBF80828EEC538003EEE17 /* AlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF80728EEC538003EEE17 /* AlertControllerFactory.swift */; };
 		0BBBF80A28EEC725003EEE17 /* ListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF80928EEC725003EEE17 /* ListViewProtocol.swift */; };
 		0BBBF80D28EEC9AD003EEE17 /* ViewControllerPresentationSpy.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BBBF80C28EEC9AD003EEE17 /* ViewControllerPresentationSpy.xcframework */; };
@@ -79,7 +79,7 @@
 		0BBBF79028ED8532003EEE17 /* MovieDBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBUITests.swift; sourceTree = "<group>"; };
 		0BBBF79228ED8532003EEE17 /* MovieDBUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0BBBF7AB28ED867E003EEE17 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		0BBBF7AD28ED86F0003EEE17 /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		0BBBF7AD28ED86F0003EEE17 /* MovieListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
 		0BBBF7AF28ED86F0003EEE17 /* ListBaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		0BBBF7B028ED86F0003EEE17 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		0BBBF7B628ED871F003EEE17 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 		0BBBF7F728EDCF96003EEE17 /* MovieListWorkerInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListWorkerInterface.swift; sourceTree = "<group>"; };
 		0BBBF7FC28EDD3BF003EEE17 /* MovieListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListUseCase.swift; sourceTree = "<group>"; };
 		0BBBF7FF28EEB12C003EEE17 /* DispatchHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchHelpers.swift; sourceTree = "<group>"; };
-		0BBBF80428EEB6F2003EEE17 /* ListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListType.swift; sourceTree = "<group>"; };
+		0BBBF80428EEB6F2003EEE17 /* MovieListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListType.swift; sourceTree = "<group>"; };
 		0BBBF80728EEC538003EEE17 /* AlertControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerFactory.swift; sourceTree = "<group>"; };
 		0BBBF80928EEC725003EEE17 /* ListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewProtocol.swift; sourceTree = "<group>"; };
 		0BBBF80C28EEC9AD003EEE17 /* ViewControllerPresentationSpy.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ViewControllerPresentationSpy.xcframework; path = "../../../UnitTestingHelperLibary/ViewControllerPresentationSpy-6.1.0/ViewControllerPresentationSpy.xcframework"; sourceTree = "<group>"; };
@@ -294,7 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				0BBBF7AE28ED86F0003EEE17 /* Cells */,
-				0BBBF7AD28ED86F0003EEE17 /* ListView.swift */,
+				0BBBF7AD28ED86F0003EEE17 /* MovieListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -403,7 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				0BBBF7E928EDCDDD003EEE17 /* MovieEndPoints.swift */,
-				0BBBF80428EEB6F2003EEE17 /* ListType.swift */,
+				0BBBF80428EEB6F2003EEE17 /* MovieListType.swift */,
 			);
 			path = EndPoints;
 			sourceTree = "<group>";
@@ -597,9 +597,9 @@
 				0BBBF7F328EDCF1D003EEE17 /* UseCaseInterface.swift in Sources */,
 				0BBBF7FD28EDD3BF003EEE17 /* MovieListUseCase.swift in Sources */,
 				0BBBF7EC28EDCECA003EEE17 /* MovieListRequest.swift in Sources */,
-				0BBBF7B128ED86F0003EEE17 /* ListView.swift in Sources */,
+				0BBBF7B128ED86F0003EEE17 /* MovieListView.swift in Sources */,
 				0BBBF80828EEC538003EEE17 /* AlertControllerFactory.swift in Sources */,
-				0BBBF80528EEB6F2003EEE17 /* ListType.swift in Sources */,
+				0BBBF80528EEB6F2003EEE17 /* MovieListType.swift in Sources */,
 				0BBBF7E328EDCCCA003EEE17 /* DecoderHelper.swift in Sources */,
 				0BBBF7B228ED86F0003EEE17 /* ListBaseCollectionViewCell.swift in Sources */,
 				0BBBF7E628EDCCCA003EEE17 /* NetworkLoader.swift in Sources */,

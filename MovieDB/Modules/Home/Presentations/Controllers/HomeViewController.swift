@@ -15,19 +15,27 @@ class HomeViewController: UIViewController {
     private let contentView = UIView()
     private var searchController: UISearchController?
     
-    lazy var popularMovieListView: ListView = {
-        let view = ListView()
+    lazy var popularMovieListView: MovieListView = {
+        let view = MovieListView()
         view.viewModel = MovieListViewModel(useCase: MovieListUseCase(page: "1",
                                                                       listType: .popular))
         view.listType(listType: .popular)
         return view
     }()
     
-    lazy var trendingMovieListView: ListView = {
-        let view = ListView()
+    lazy var trendingMovieListView: MovieListView = {
+        let view = MovieListView()
         view.viewModel = MovieListViewModel(useCase: MovieListUseCase(page: "1",
                                                                       listType: .trending))
         view.listType(listType: .trending)
+        return view
+    }()
+    
+    lazy var discoverMovieListView: MovieListView = {
+        let view = MovieListView()
+        view.viewModel = MovieListViewModel(useCase: MovieListUseCase(page: "1",
+                                                                      listType: .nowPlaying))
+        view.listType(listType: .nowPlaying)
         return view
     }()
     
@@ -78,6 +86,7 @@ class HomeViewController: UIViewController {
     private func setupHierarchy() {
         scrollView.addSubview(popularMovieListView)
         scrollView.addSubview(trendingMovieListView)
+        scrollView.addSubview(discoverMovieListView)
     }
     
     private func setupLayouts() {
@@ -90,6 +99,13 @@ class HomeViewController: UIViewController {
         
         
         trendingMovieListView.anchor(top: popularMovieListView.bottomAnchor,
+                                     leading: contentView.leadingAnchor,
+                                     bottom: nil,
+                                     trailing: view.trailingAnchor,
+                                     padding: .init(top: 20, left: 10, bottom: 0, right: 10),
+                                     size: .init(width: 0, height: 250))
+        
+        discoverMovieListView.anchor(top: trendingMovieListView.bottomAnchor,
                                      leading: contentView.leadingAnchor,
                                      bottom: contentView.bottomAnchor,
                                      trailing: view.trailingAnchor,

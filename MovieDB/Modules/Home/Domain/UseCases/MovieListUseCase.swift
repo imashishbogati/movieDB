@@ -17,7 +17,7 @@ final class MovieListUseCase: UseCaseInterface {
     
     init(worker: MovieListWokerInterface = MovieListWorker(),
          page: String,
-         listType: ListType) {
+         listType: MovieListType) {
         self.worker = worker
         self.page = page
         self.listType = listType.rawValue

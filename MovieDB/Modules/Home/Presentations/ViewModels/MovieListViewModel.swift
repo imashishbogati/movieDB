@@ -16,12 +16,14 @@ final class MovieListViewModel: MovieListViewModelInterface {
         self.useCase = useCase
     }
     
-    func listTitle(list: ListType) -> String {
+    func listTitle(list: MovieListType) -> String {
         switch list {
         case .popular:
             return "Popular"
         case .trending:
             return "Trending"
+        case .nowPlaying:
+            return "Now Playing"
         }
     }
     

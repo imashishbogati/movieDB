@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - ListView
 
-class ListView: UIView {
+class MovieListView: UIView {
     
     // MARK: - UI
     let headingLabel: UILabel = {
@@ -49,7 +49,7 @@ class ListView: UIView {
     // MARK: - Ivars
     var viewModel: MovieListViewModelInterface?
     private var movieLists: MovieListResponse?
-    private var listType: ListType = .popular
+    private var listType: MovieListType = .popular
 
     // MARK: - Life Cycle
     override init(frame: CGRect) {
@@ -111,13 +111,13 @@ class ListView: UIView {
     }
     
     // MARK: - Public
-    func listType(listType: ListType) {
+    func listType(listType: MovieListType) {
         self.listType = listType
         loadData()
     }
 }
 
-extension ListView: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+extension MovieListView: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movieLists?.results.count ?? 0

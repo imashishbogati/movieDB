@@ -8,7 +8,7 @@
 import Foundation
 
 protocol MovieListViewModelInterface {
-    func listTitle(list: ListType) -> String
+    func listTitle(list: MovieListType) -> String
     func getMovies(request: MovieListRequest,
                    completion: @escaping (Result<MovieListResponse, NetworkError>) -> Void)
 }

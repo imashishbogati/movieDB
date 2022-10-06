@@ -7,7 +7,8 @@
 
 import Foundation
 
-enum ListType: String {
+enum MovieListType: String {
     case popular = "movie/popular"
     case trending = "trending/movie/day"
+    case nowPlaying = "movie/now_playing"
 }
