@@ -10,9 +10,9 @@ import Foundation
 // MARK: - MovieListViewModel
 
 final class MovieListViewModel: MovieListViewModelInterface {
-    private var useCase: UseCaseInterface
+    private var useCase: MovieListUseCaseInterface
     
-    init(useCase: UseCaseInterface) {
+    init(useCase: MovieListUseCaseInterface) {
         self.useCase = useCase
     }
     

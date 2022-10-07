@@ -8,7 +8,7 @@
 import Foundation
 
 
-protocol UseCaseInterface {
+protocol MovieListUseCaseInterface {
     func getMovies(request: MovieListRequest,
                   completion: @escaping (Result<MovieListResponse, NetworkError>) -> Void)
 }

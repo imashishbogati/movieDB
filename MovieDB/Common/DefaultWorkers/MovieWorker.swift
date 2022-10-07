@@ -1,13 +1,13 @@
 //
-//  MovieListWorker.swift
+//  MovieWorker.swift
 //  MovieDB
 //
-//  Created by Ashish Bogati on 05/10/2022.
+//  Created by Ashish Bogati on 07/10/2022.
 //
 
 import Foundation
 
-final class MovieListWorker: MovieListWokerInterface {
+final class MovieWorker: MovieListWokerInterface {
     
     var networkService: NetworkService
     
@@ -34,8 +34,6 @@ final class MovieListWorker: MovieListWokerInterface {
             if let error = error {
                 completion(.failure(error))
             }
-            
-            
             
             completion(.success(data))
         }

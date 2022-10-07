@@ -62,14 +62,6 @@ class HomeViewController: UIViewController {
         showActivityIndicator()
     }
     
-    private func showActivityIndicator() {
-        ActivityIndicator.shared.showIndicator(controller: self)
-    }
-    
-    private func hideActivityIndicator() {
-        ActivityIndicator.shared.hideIndicator()
-    }
-    
     private func setupNavigationBar() {
         title = "Home"
         let searchButton = UIButton(frame: .init(x: 0, y: 0, width: 20, height: 20))
@@ -161,7 +153,8 @@ extension HomeViewController: MovieListViewDelegate {
     
     func didTapMovie(movieID: Int?) {
         if let movieID {
-            let movieDetailsVC = MovieDetailsFactory.make(movieID: movieID)
+            let movieDetailsVM = MovieDetailsViewModel(movieID: movieID)
+            let movieDetailsVC = MovieDetailsFactory.make(viewModel: movieDetailsVM)
             show(movieDetailsVC, sender: self)
         }
     }

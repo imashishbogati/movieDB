@@ -33,4 +33,12 @@ extension UIViewController {
         alertController.addAction(okAction)
         present(alertController, animated: true)
     }
+    
+    func showActivityIndicator() {
+        ActivityIndicator.shared.showIndicator(controller: self)
+    }
+    
+    func hideActivityIndicator() {
+        ActivityIndicator.shared.hideIndicator()
+    }
 }

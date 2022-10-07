@@ -22,8 +22,8 @@ class MovieDetailsViewController: UIViewController {
     lazy var guide = self.view.safeAreaLayoutGuide
     let scrollView = UIScrollView()
     let contentView = UIView()
-    
-    var movieID: Int?
+
+    var viewModel: MovieDetailsViewModelInterface?
     
     let posterImageView: UIImageView = {
         let view = UIImageView()
@@ -42,7 +42,7 @@ class MovieDetailsViewController: UIViewController {
     
     let overViewDescriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding."
+        label.text = ""
         label.textColor = ColorCompatibility.label
         label.font = .systemFont(ofSize: 14, weight: .regular)
         label.numberOfLines = 3
@@ -63,6 +63,7 @@ class MovieDetailsViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.setupViews()
+        self.loadData()
     }
     
     
@@ -78,7 +79,31 @@ class MovieDetailsViewController: UIViewController {
     }
     
     private func loadData() {
-        
+        showActivityIndicator()
+        viewModel?.getMovieDetails(completion: { [weak self] response in
+            guard let self = self else {
+                return
+            }
+            self.hideActivityIndicator()
+            switch response {
+            case .success(let details):
+                self.setMovieDetailsData(movieDetails: details)
+            case .failure(let error):
+                self.scrollView.isHidden = true
+                let emptyView = EmptyView()
+                emptyView.createEmptyView(title: error.localizedDescription, isRetryButtonHidden: true, viewController: self)
+            }
+        })
+    }
+    
+    private func setMovieDetailsData(movieDetails: MovieDetails?) {
+        title = movieDetails?.original_title ?? ""
+        posterImageView.setImage(url: movieDetails?.backdrop_path ?? "") { [weak self] status in
+            if status == false {
+                self?.posterImageView.image = UIImage(named: "empty-profile")
+            }
+        }
+        overViewDescriptionLabel.text = movieDetails?.overview ?? ""
     }
 
     private func setupHiearchy() {

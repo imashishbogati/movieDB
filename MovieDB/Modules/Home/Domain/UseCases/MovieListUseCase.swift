@@ -9,13 +9,13 @@ import Foundation
 
 // MARK: - MovieListUseCase
 
-final class MovieListUseCase: UseCaseInterface {
+final class MovieListUseCase: MovieListUseCaseInterface {
     
     private var worker: MovieListWokerInterface
     private var page: String
     private var listType: String
     
-    init(worker: MovieListWokerInterface = MovieListWorker(),
+    init(worker: MovieListWokerInterface = MovieWorker(),
          page: String,
          listType: MovieListType) {
         self.worker = worker
