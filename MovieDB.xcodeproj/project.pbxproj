@@ -57,6 +57,11 @@
 		0BBBF82F28EFFE9D003EEE17 /* CaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF82A28EFFE9D003EEE17 /* CaseListView.swift */; };
 		0BBBF83128EFFE9D003EEE17 /* CastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF82D28EFFE9D003EEE17 /* CastCollectionViewCell.swift */; };
 		0BBBF83428F000C8003EEE17 /* MovieDetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF83328F000C8003EEE17 /* MovieDetailsFactory.swift */; };
+		0BBBF83628F0023D003EEE17 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF83528F0023D003EEE17 /* MovieDetailsViewModel.swift */; };
+		0BBBF83928F00265003EEE17 /* MovieDetailsInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF83828F00265003EEE17 /* MovieDetailsInterfaces.swift */; };
+		0BBBF83C28F03E55003EEE17 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF83B28F03E55003EEE17 /* TabBarViewController.swift */; };
+		0BBBF84128F03F36003EEE17 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF84028F03F36003EEE17 /* FavouritesViewController.swift */; };
+		0BBBF84428F03F79003EEE17 /* FavouriteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF84328F03F79003EEE17 /* FavouriteFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +134,11 @@
 		0BBBF82A28EFFE9D003EEE17 /* CaseListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseListView.swift; sourceTree = "<group>"; };
 		0BBBF82D28EFFE9D003EEE17 /* CastCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastCollectionViewCell.swift; sourceTree = "<group>"; };
 		0BBBF83328F000C8003EEE17 /* MovieDetailsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsFactory.swift; sourceTree = "<group>"; };
+		0BBBF83528F0023D003EEE17 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
+		0BBBF83828F00265003EEE17 /* MovieDetailsInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsInterfaces.swift; sourceTree = "<group>"; };
+		0BBBF83B28F03E55003EEE17 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		0BBBF84028F03F36003EEE17 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		0BBBF84328F03F79003EEE17 /* FavouriteFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +257,8 @@
 		0BBBF7A228ED85FA003EEE17 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0BBBF83A28F03DF0003EEE17 /* TabBar */,
+				0BBBF83D28F03F12003EEE17 /* Favourites */,
 				0BBBF82028EFFE0C003EEE17 /* MovieDetails */,
 				0BBBF7A428ED8639003EEE17 /* Search */,
 				0BBBF7A328ED8625003EEE17 /* Home */,
@@ -499,6 +511,7 @@
 		0BBBF82128EFFE13003EEE17 /* Presentations */ = {
 			isa = PBXGroup;
 			children = (
+				0BBBF83728F00256003EEE17 /* Interface */,
 				0BBBF82728EFFE38003EEE17 /* Factory */,
 				0BBBF82628EFFE31003EEE17 /* ViewModels */,
 				0BBBF82528EFFE2E003EEE17 /* Views */,
@@ -541,6 +554,7 @@
 		0BBBF82628EFFE31003EEE17 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0BBBF83528F0023D003EEE17 /* MovieDetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -559,6 +573,55 @@
 				0BBBF82D28EFFE9D003EEE17 /* CastCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		0BBBF83728F00256003EEE17 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				0BBBF83828F00265003EEE17 /* MovieDetailsInterfaces.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		0BBBF83A28F03DF0003EEE17 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				0BBBF83B28F03E55003EEE17 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		0BBBF83D28F03F12003EEE17 /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				0BBBF83E28F03F1E003EEE17 /* Presentations */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
+		0BBBF83E28F03F1E003EEE17 /* Presentations */ = {
+			isa = PBXGroup;
+			children = (
+				0BBBF84228F03F69003EEE17 /* Factory */,
+				0BBBF83F28F03F21003EEE17 /* Controller */,
+			);
+			path = Presentations;
+			sourceTree = "<group>";
+		};
+		0BBBF83F28F03F21003EEE17 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0BBBF84028F03F36003EEE17 /* FavouritesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0BBBF84228F03F69003EEE17 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				0BBBF84328F03F79003EEE17 /* FavouriteFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -705,24 +768,28 @@
 				0BBBF7E128EDCCCA003EEE17 /* URLSession+NetworkLoader.swift in Sources */,
 				0BBBF7D028ED94B5003EEE17 /* HomeInterfaces.swift in Sources */,
 				0BBBF7EE28EDCEF1003EEE17 /* MovieListResponse.swift in Sources */,
+				0BBBF83C28F03E55003EEE17 /* TabBarViewController.swift in Sources */,
 				0BBBF81528EF2ADE003EEE17 /* UIImageView+Extensions.swift in Sources */,
 				0BBBF7B328ED86F0003EEE17 /* ListCollectionViewCell.swift in Sources */,
 				0BBBF7E228EDCCCA003EEE17 /* NetworkService.swift in Sources */,
 				0BBBF7BD28ED871F003EEE17 /* AnchoredConstraints.swift in Sources */,
 				0BBBF7F328EDCF1D003EEE17 /* UseCaseInterface.swift in Sources */,
 				0BBBF7FD28EDD3BF003EEE17 /* MovieListUseCase.swift in Sources */,
+				0BBBF83628F0023D003EEE17 /* MovieDetailsViewModel.swift in Sources */,
 				0BBBF83428F000C8003EEE17 /* MovieDetailsFactory.swift in Sources */,
 				0BBBF7EC28EDCECA003EEE17 /* MovieListRequest.swift in Sources */,
 				0BBBF7B128ED86F0003EEE17 /* MovieListView.swift in Sources */,
 				0BBBF80828EEC538003EEE17 /* AlertControllerFactory.swift in Sources */,
 				0BBBF80528EEB6F2003EEE17 /* MovieListType.swift in Sources */,
 				0BBBF7E328EDCCCA003EEE17 /* DecoderHelper.swift in Sources */,
+				0BBBF84428F03F79003EEE17 /* FavouriteFactory.swift in Sources */,
 				0BBBF7B228ED86F0003EEE17 /* ListBaseCollectionViewCell.swift in Sources */,
 				0BBBF83128EFFE9D003EEE17 /* CastCollectionViewCell.swift in Sources */,
 				0BBBF81F28EFFC58003EEE17 /* ActivityIndicator.swift in Sources */,
 				0BBBF7E628EDCCCA003EEE17 /* NetworkLoader.swift in Sources */,
 				0BBBF82928EFFE71003EEE17 /* MovieDetailsViewController.swift in Sources */,
 				0BBBF82F28EFFE9D003EEE17 /* CaseListView.swift in Sources */,
+				0BBBF83928F00265003EEE17 /* MovieDetailsInterfaces.swift in Sources */,
 				0BBBF7C728ED895A003EEE17 /* HomeFactory.swift in Sources */,
 				0BBBF7EA28EDCDDD003EEE17 /* MovieEndPoints.swift in Sources */,
 				0BBBF7E428EDCCCA003EEE17 /* EncoderHelper.swift in Sources */,
@@ -734,6 +801,7 @@
 				0BBBF81B28EFE648003EEE17 /* EmptyView.swift in Sources */,
 				0BBBF7E528EDCCCA003EEE17 /* NetworkError.swift in Sources */,
 				0BBBF80A28EEC725003EEE17 /* ListViewProtocol.swift in Sources */,
+				0BBBF84128F03F36003EEE17 /* FavouritesViewController.swift in Sources */,
 				0BBBF7D228ED95F5003EEE17 /* MovieListViewModel.swift in Sources */,
 				0BBBF77228ED8531003EEE17 /* SceneDelegate.swift in Sources */,
 				0BBBF80028EEB12C003EEE17 /* DispatchHelpers.swift in Sources */,

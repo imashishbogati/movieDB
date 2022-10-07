@@ -8,9 +8,8 @@
 import UIKit
 
 final class AppConfigurations {
-    static func setupRootViewController() -> UINavigationController {
-        let homeVC = HomeFactory.make()
-        let navigation = UINavigationController(rootViewController: homeVC)
-        return navigation
+    static func setupRootViewController() -> UITabBarController {
+        let rootVC = TabBarViewController()
+        return rootVC
     }
 }
