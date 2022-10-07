@@ -18,7 +18,7 @@ class FavouritesViewController: UIViewController {
     
     // MARK: - Private
     private func setupViews() {
-        
+        view.backgroundColor = ColorCompatibility.secondarySystemBackground
     }
 
 }

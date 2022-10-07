@@ -68,7 +68,7 @@ class MovieDetailsViewController: UIViewController {
     
     // MARK: - Private
     private func setupViews() {
-        view.backgroundColor = .white
+        view.backgroundColor = ColorCompatibility.secondarySystemBackground
         let backButton = UIBarButtonItem()
         backButton.title = ""
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
