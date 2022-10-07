@@ -41,7 +41,6 @@ final class ActivityIndicator: UIView {
         
         view.addSubview(self)
         addSubview(indicator)
-        backgroundColor = .white
         
         NSLayoutConstraint.activate([
             indicator.centerXAnchor.constraint(equalTo: centerXAnchor),
