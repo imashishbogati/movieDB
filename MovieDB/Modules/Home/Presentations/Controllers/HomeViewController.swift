@@ -59,6 +59,15 @@ class HomeViewController: UIViewController {
         setupHierarchy()
         setupLayouts()
         configureEmptyView()
+        showActivityIndicator()
+    }
+    
+    private func showActivityIndicator() {
+        ActivityIndicator.shared.showIndicator(controller: self)
+    }
+    
+    private func hideActivityIndicator() {
+        ActivityIndicator.shared.hideIndicator()
     }
     
     private func setupNavigationBar() {
@@ -127,6 +136,8 @@ class HomeViewController: UIViewController {
     // MARK: - Action
     @objc
     func didTapRetryButton() {
+        showActivityIndicator()
+        emptyView.removeFromSuperview()
         trendingMovieListView.reloadList()
         popularMovieListView.reloadList()
         discoverMovieListView.reloadList()
@@ -138,9 +149,11 @@ class HomeViewController: UIViewController {
 extension HomeViewController: MovieListViewDelegate {
     func didFailed(error: NetworkError?) {
         if error != nil {
+            hideActivityIndicator()
             scrollView.isHidden = true
             emptyView.createEmptyView(title: "Something went wrong.", isRetryButtonHidden: true, viewController: self)
         } else {
+            hideActivityIndicator()
             emptyView.removeFromSuperview()
             scrollView.isHidden = false
         }

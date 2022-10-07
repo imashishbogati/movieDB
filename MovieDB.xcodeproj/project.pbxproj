@@ -52,6 +52,7 @@
 		0BBBF81528EF2ADE003EEE17 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF81428EF2ADE003EEE17 /* UIImageView+Extensions.swift */; };
 		0BBBF81828EFC410003EEE17 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0BBBF81728EFC410003EEE17 /* SDWebImage */; };
 		0BBBF81B28EFE648003EEE17 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF81A28EFE648003EEE17 /* EmptyView.swift */; };
+		0BBBF81F28EFFC58003EEE17 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF81E28EFFC58003EEE17 /* ActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		0BBBF80F28EEC9D5003EEE17 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		0BBBF81428EF2ADE003EEE17 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		0BBBF81A28EFE648003EEE17 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		0BBBF81E28EFFC58003EEE17 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -470,6 +472,7 @@
 			isa = PBXGroup;
 			children = (
 				0BBBF81A28EFE648003EEE17 /* EmptyView.swift */,
+				0BBBF81E28EFFC58003EEE17 /* ActivityIndicator.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 				0BBBF80528EEB6F2003EEE17 /* MovieListType.swift in Sources */,
 				0BBBF7E328EDCCCA003EEE17 /* DecoderHelper.swift in Sources */,
 				0BBBF7B228ED86F0003EEE17 /* ListBaseCollectionViewCell.swift in Sources */,
+				0BBBF81F28EFFC58003EEE17 /* ActivityIndicator.swift in Sources */,
 				0BBBF7E628EDCCCA003EEE17 /* NetworkLoader.swift in Sources */,
 				0BBBF7C728ED895A003EEE17 /* HomeFactory.swift in Sources */,
 				0BBBF7EA28EDCDDD003EEE17 /* MovieEndPoints.swift in Sources */,
