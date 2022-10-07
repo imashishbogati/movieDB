@@ -44,11 +44,24 @@ final class HomeViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.navigationController?.topViewController?.contains(sut.emptyView), false)
     }
     
+    func test_movieListTap_shouldPushDetailsVC() throws {
+        let sut = try makeSut()
+        sut.loadViewIfNeeded()
+        sut.trendingMovieListView.listType(listType: .trending)
+        sut.didTapMovie(movieID: 1)
+        executeRunLoop()
+        XCTAssertEqual(sut.navigationController?.viewControllers.count, 2)
+    }
+    
 }
 
 extension HomeViewController {
     func didFailed(error: NetworkError) {
         trendingMovieListView.delegate?.didFailed(error: error)
+    }
+    
+    func didTapMovie(movieID: Int) {
+        trendingMovieListView.delegate?.didTapMovie(movieID: movieID)
     }
 }
 
