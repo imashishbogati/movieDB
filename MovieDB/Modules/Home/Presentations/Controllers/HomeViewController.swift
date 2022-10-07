@@ -11,15 +11,16 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    private let scrollView = UIScrollView()
-    private let contentView = UIView()
-    private var searchController: UISearchController?
+    let scrollView = UIScrollView()
+    let contentView = UIView()
+    var searchController: UISearchController?
     
     lazy var popularMovieListView: MovieListView = {
         let view = MovieListView()
         view.viewModel = MovieListViewModel(useCase: MovieListUseCase(page: "1",
                                                                       listType: .popular))
         view.listType(listType: .popular)
+        view.delegate = self
         return view
     }()
     
@@ -28,6 +29,7 @@ class HomeViewController: UIViewController {
         view.viewModel = MovieListViewModel(useCase: MovieListUseCase(page: "1",
                                                                       listType: .trending))
         view.listType(listType: .trending)
+        view.delegate = self
         return view
     }()
     
@@ -36,8 +38,11 @@ class HomeViewController: UIViewController {
         view.viewModel = MovieListViewModel(useCase: MovieListUseCase(page: "1",
                                                                       listType: .nowPlaying))
         view.listType(listType: .nowPlaying)
+        view.delegate = self
         return view
     }()
+    
+    lazy var emptyView = EmptyView()
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -53,12 +58,17 @@ class HomeViewController: UIViewController {
         setupScrollView()
         setupHierarchy()
         setupLayouts()
+        configureEmptyView()
     }
     
     private func setupNavigationBar() {
         title = "Home"
         let searchButton = UIButton(frame: .init(x: 0, y: 0, width: 20, height: 20))
         setNavigationRightImageButton(buttons: [searchButton], imageName: "Search")
+    }
+    
+    private func configureEmptyView() {
+        emptyView.retryButton.addTarget(self, action: #selector(didTapRetryButton), for: .touchUpInside)
     }
     
     private func setupScrollView() {
@@ -113,4 +123,26 @@ class HomeViewController: UIViewController {
                                      size: .init(width: 0, height: 250))
     }
     
+    
+    // MARK: - Action
+    @objc
+    func didTapRetryButton() {
+        trendingMovieListView.reloadList()
+        popularMovieListView.reloadList()
+        discoverMovieListView.reloadList()
+    }
+    
+}
+
+
+extension HomeViewController: MovieListViewDelegate {
+    func didFailed(error: NetworkError?) {
+        if error != nil {
+            scrollView.isHidden = true
+            emptyView.createEmptyView(title: "Something went wrong.", isRetryButtonHidden: true, viewController: self)
+        } else {
+            emptyView.removeFromSuperview()
+            scrollView.isHidden = false
+        }
+    }
 }

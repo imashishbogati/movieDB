@@ -9,6 +9,10 @@ import UIKit
 
 // MARK: - ListView
 
+protocol MovieListViewDelegate: NSObject {
+    func didFailed(error: NetworkError?)
+}
+
 class MovieListView: UIView {
     
     // MARK: - UI
@@ -34,6 +38,7 @@ class MovieListView: UIView {
         return layout
     }()
     
+    weak var delegate: MovieListViewDelegate?
     
     lazy var collectionView: UICollectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -78,8 +83,9 @@ class MovieListView: UIView {
             case .success(let movieList):
                 self.movieLists = movieList
                 self.collectionView.reloadData()
+                self.delegate?.didFailed(error: nil)
             case .failure(let failure):
-                self.window?.rootViewController?.presentAlert(title: "Failed", message: failure.localizedDescription)
+                self.delegate?.didFailed(error: failure)
             }
         })
     }
@@ -113,6 +119,10 @@ class MovieListView: UIView {
     // MARK: - Public
     func listType(listType: MovieListType) {
         self.listType = listType
+        loadData()
+    }
+    
+    func reloadList() {
         loadData()
     }
 }

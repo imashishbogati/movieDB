@@ -27,7 +27,7 @@
 		0BBBF7CB28ED8A60003EEE17 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7CA28ED8A60003EEE17 /* HomeViewControllerTests.swift */; };
 		0BBBF7D028ED94B5003EEE17 /* HomeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7CF28ED94B5003EEE17 /* HomeInterfaces.swift */; };
 		0BBBF7D228ED95F5003EEE17 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7D128ED95F5003EEE17 /* MovieListViewModel.swift */; };
-		0BBBF7D428ED98D8003EEE17 /* TestListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7D328ED98D8003EEE17 /* TestListView.swift */; };
+		0BBBF7D428ED98D8003EEE17 /* MovieListViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7D328ED98D8003EEE17 /* MovieListViewTest.swift */; };
 		0BBBF7E128EDCCCA003EEE17 /* URLSession+NetworkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7D828EDCCC9003EEE17 /* URLSession+NetworkLoader.swift */; };
 		0BBBF7E228EDCCCA003EEE17 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7D928EDCCC9003EEE17 /* NetworkService.swift */; };
 		0BBBF7E328EDCCCA003EEE17 /* DecoderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7DB28EDCCC9003EEE17 /* DecoderHelper.swift */; };
@@ -50,6 +50,8 @@
 		0BBBF81028EEC9D5003EEE17 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF80F28EEC9D5003EEE17 /* TestHelpers.swift */; };
 		0BBBF81328EF2AC8003EEE17 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0BBBF81228EF2AC8003EEE17 /* SDWebImage */; };
 		0BBBF81528EF2ADE003EEE17 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF81428EF2ADE003EEE17 /* UIImageView+Extensions.swift */; };
+		0BBBF81828EFC410003EEE17 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0BBBF81728EFC410003EEE17 /* SDWebImage */; };
+		0BBBF81B28EFE648003EEE17 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF81A28EFE648003EEE17 /* EmptyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,7 +96,7 @@
 		0BBBF7CA28ED8A60003EEE17 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		0BBBF7CF28ED94B5003EEE17 /* HomeInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterfaces.swift; sourceTree = "<group>"; };
 		0BBBF7D128ED95F5003EEE17 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
-		0BBBF7D328ED98D8003EEE17 /* TestListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestListView.swift; sourceTree = "<group>"; };
+		0BBBF7D328ED98D8003EEE17 /* MovieListViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewTest.swift; sourceTree = "<group>"; };
 		0BBBF7D828EDCCC9003EEE17 /* URLSession+NetworkLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+NetworkLoader.swift"; sourceTree = "<group>"; };
 		0BBBF7D928EDCCC9003EEE17 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		0BBBF7DB28EDCCC9003EEE17 /* DecoderHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoderHelper.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		0BBBF80C28EEC9AD003EEE17 /* ViewControllerPresentationSpy.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ViewControllerPresentationSpy.xcframework; path = "../../../UnitTestingHelperLibary/ViewControllerPresentationSpy-6.1.0/ViewControllerPresentationSpy.xcframework"; sourceTree = "<group>"; };
 		0BBBF80F28EEC9D5003EEE17 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		0BBBF81428EF2ADE003EEE17 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		0BBBF81A28EFE648003EEE17 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BBBF81828EFC410003EEE17 /* SDWebImage in Frameworks */,
 				0BBBF80D28EEC9AD003EEE17 /* ViewControllerPresentationSpy.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,7 +186,7 @@
 			children = (
 				0BBBF80E28EEC9CC003EEE17 /* TestHelpers */,
 				0BBBF7CA28ED8A60003EEE17 /* HomeViewControllerTests.swift */,
-				0BBBF7D328ED98D8003EEE17 /* TestListView.swift */,
+				0BBBF7D328ED98D8003EEE17 /* MovieListViewTest.swift */,
 			);
 			path = MovieDBTests;
 			sourceTree = "<group>";
@@ -209,6 +213,7 @@
 		0BBBF7A028ED85DA003EEE17 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0BBBF81928EFE637003EEE17 /* CustomViews */,
 				0BBBF80628EEC52C003EEE17 /* Factory */,
 				0BBBF7FE28EEB0DB003EEE17 /* DispatchHelpers */,
 				0BBBF7E828EDCDD2003EEE17 /* EndPoints */,
@@ -461,6 +466,14 @@
 			path = TestHelpers;
 			sourceTree = "<group>";
 		};
+		0BBBF81928EFE637003EEE17 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				0BBBF81A28EFE648003EEE17 /* EmptyView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -498,6 +511,9 @@
 				0BBBF78428ED8532003EEE17 /* PBXTargetDependency */,
 			);
 			name = MovieDBTests;
+			packageProductDependencies = (
+				0BBBF81728EFC410003EEE17 /* SDWebImage */,
+			);
 			productName = MovieDBTests;
 			productReference = 0BBBF78228ED8532003EEE17 /* MovieDBTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -623,6 +639,7 @@
 				0BBBF7F828EDCF96003EEE17 /* MovieListWorkerInterface.swift in Sources */,
 				0BBBF7F528EDCF77003EEE17 /* MovieListWorker.swift in Sources */,
 				0BBBF77028ED8531003EEE17 /* AppDelegate.swift in Sources */,
+				0BBBF81B28EFE648003EEE17 /* EmptyView.swift in Sources */,
 				0BBBF7E528EDCCCA003EEE17 /* NetworkError.swift in Sources */,
 				0BBBF80A28EEC725003EEE17 /* ListViewProtocol.swift in Sources */,
 				0BBBF7D228ED95F5003EEE17 /* MovieListViewModel.swift in Sources */,
@@ -639,7 +656,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BBBF7D428ED98D8003EEE17 /* TestListView.swift in Sources */,
+				0BBBF7D428ED98D8003EEE17 /* MovieListViewTest.swift in Sources */,
 				0BBBF7CB28ED8A60003EEE17 /* HomeViewControllerTests.swift in Sources */,
 				0BBBF81028EEC9D5003EEE17 /* TestHelpers.swift in Sources */,
 			);
@@ -994,6 +1011,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		0BBBF81228EF2AC8003EEE17 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0BBBF81128EF2AC8003EEE17 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		0BBBF81728EFC410003EEE17 /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0BBBF81128EF2AC8003EEE17 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;

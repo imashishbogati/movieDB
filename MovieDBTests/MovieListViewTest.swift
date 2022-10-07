@@ -9,7 +9,7 @@ import XCTest
 import ViewControllerPresentationSpy
 @testable import MovieDB
 
-final class TestListView: XCTestCase {
+final class MovieListViewTest: XCTestCase {
     
     func test_canInit() throws {
         _ = try makeSut()
@@ -42,23 +42,8 @@ final class TestListView: XCTestCase {
         sut.listType(listType: .trending)
         XCTAssertEqual(sut.numberOfItemsInList(for: 0), 1)
         let cell = sut.listCell(for: 0)
-        XCTAssertEqual(cell?.titleLabel.text, "Test title")
+        XCTAssertEqual(cell?.titleLabel.text, "Test Orginal title")
     }
-    
-    #warning("Test failed here alert is not present fixed later.")
-//    func test_loadData_withFailureResponse_shouldShowAlert() throws {
-//        let alertVerifer = makeAlertVerifier()
-//        let sut = try makeSut()
-//        let vm = ListViewModelFailureStubs()
-//        sut.viewModel = vm
-//        sut.listType(listType: .trending)
-//        XCTAssertEqual(sut.numberOfItemsInList(for: 0), 0)
-//        alertVerifer.verify(title: "Failed",
-//                            message: NetworkError.noData.localizedDescription,
-//                            animated: true, actions: [.default("OK")],
-//                            presentingViewController: UIWindow().rootViewController)
-//    }
-    
     
 }
 
@@ -106,17 +91,6 @@ private class ListViewModelStubs: MovieListViewModelInterface {
     func getMovies(request: MovieListRequest,
                    completion: @escaping (Result<MovieListResponse, NetworkError>) -> Void) {
         completion(.success(makeMovieResponse()))
-    }
-    
-    func listTitle(list: MovieDB.MovieListType) -> String {
-        return "test"
-    }
-}
-
-private class ListViewModelFailureStubs: MovieListViewModelInterface {
-    func getMovies(request: MovieListRequest,
-                   completion: @escaping (Result<MovieListResponse, NetworkError>) -> Void) {
-        completion(.failure(.noData))
     }
     
     func listTitle(list: MovieDB.MovieListType) -> String {

@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import ViewControllerPresentationSpy
 @testable import MovieDB
 
 final class HomeViewControllerTests: XCTestCase {
@@ -21,6 +22,32 @@ final class HomeViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.navigationItem.rightBarButtonItems?.count, 1, "Navigation right bar button")
     }
     
+    func test_movieListView_delegates_shouldNotBeNil() throws {
+        let sut = try makeSut()
+        sut.loadViewIfNeeded()
+        XCTAssertNotNil(sut.trendingMovieListView.delegate)
+    }
+    
+    func test_movieListView_delegateMethodDidFailed_shouldShowAlert() throws {
+        let sut = try makeSut()
+        sut.loadViewIfNeeded()
+        sut.didFailed(error: .noData)
+        XCTAssertEqual(sut.scrollView.isHidden, true)
+    }
+    
+    func test_movieListView_delegateMethodErrorNil_shouldShowContent() throws {
+        let sut = try makeSut()
+        sut.loadViewIfNeeded()
+        sut.didFailed(error: nil)
+        XCTAssertEqual(sut.scrollView.isHidden, false)
+    }
+    
+}
+
+extension HomeViewController {
+    func didFailed(error: NetworkError) {
+        trendingMovieListView.delegate?.didFailed(error: error)
+    }
 }
 
 private func makeSut() throws -> HomeViewController {
