@@ -22,7 +22,8 @@ class MovieDetailsViewController: UIViewController {
     lazy var guide = self.view.safeAreaLayoutGuide
     let scrollView = UIScrollView()
     let contentView = UIView()
-
+    let emptyView = EmptyView()
+    
     var viewModel: MovieDetailsViewModelInterface?
     
     let posterImageView: UIImageView = {
@@ -87,11 +88,12 @@ class MovieDetailsViewController: UIViewController {
             self.hideActivityIndicator()
             switch response {
             case .success(let details):
+                self.scrollView.isHidden = false
                 self.setMovieDetailsData(movieDetails: details)
             case .failure(let error):
                 self.scrollView.isHidden = true
-                let emptyView = EmptyView()
-                emptyView.createEmptyView(title: error.localizedDescription, isRetryButtonHidden: true, viewController: self)
+                self.emptyView.retryButton.addTarget(self, action: #selector(self.didTapRetryButton), for: .touchUpInside)
+                self.emptyView.createEmptyView(title: error.localizedDescription, isRetryButtonHidden: true, viewController: self)
             }
         })
     }
@@ -133,6 +135,13 @@ class MovieDetailsViewController: UIViewController {
     }
     
     // MARK: - Action
+    
+    @objc
+    func didTapRetryButton() {
+        emptyView.removeFromSuperview()
+        loadData()
+    }
+    
     @objc
     func labelAction(gesture: UITapGestureRecognizer)
     {
