@@ -20,10 +20,15 @@ final class ActivityIndicator: UIView {
     
     private override init(frame: CGRect) {
         super.init(frame: frame)
+        setupViews()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    private func setupViews() {
+        backgroundColor = ColorCompatibility.secondarySystemBackground
     }
     
     // MARK: - Public
