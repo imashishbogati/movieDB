@@ -7,14 +7,7 @@
 
 import UIKit
 
-public extension CGFloat {
-    static let marginTop: CGFloat = 20
-    static let marginLeft: CGFloat = 20
-    static let marginRight: CGFloat = 20
-    static let marginBottom: CGFloat = 20
-    static let defaultCornerRadius: CGFloat = 6
-}
-
+// MARK: - MovieDetailsViewController
 
 class MovieDetailsViewController: UIViewController {
 
