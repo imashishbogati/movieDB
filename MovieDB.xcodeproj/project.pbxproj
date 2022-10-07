@@ -15,7 +15,6 @@
 		0BBBF79328ED8532003EEE17 /* MovieDBUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF79228ED8532003EEE17 /* MovieDBUITestsLaunchTests.swift */; };
 		0BBBF7AC28ED867E003EEE17 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7AB28ED867E003EEE17 /* HomeViewController.swift */; };
 		0BBBF7B128ED86F0003EEE17 /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7AD28ED86F0003EEE17 /* MovieListView.swift */; };
-		0BBBF7B228ED86F0003EEE17 /* ListBaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7AF28ED86F0003EEE17 /* ListBaseCollectionViewCell.swift */; };
 		0BBBF7B328ED86F0003EEE17 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7B028ED86F0003EEE17 /* ListCollectionViewCell.swift */; };
 		0BBBF7BB28ED871F003EEE17 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7B628ED871F003EEE17 /* Common.swift */; };
 		0BBBF7BC28ED871F003EEE17 /* ColorCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7B728ED871F003EEE17 /* ColorCompatibility.swift */; };
@@ -94,7 +93,6 @@
 		0BBBF79228ED8532003EEE17 /* MovieDBUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0BBBF7AB28ED867E003EEE17 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0BBBF7AD28ED86F0003EEE17 /* MovieListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
-		0BBBF7AF28ED86F0003EEE17 /* ListBaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		0BBBF7B028ED86F0003EEE17 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		0BBBF7B628ED871F003EEE17 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		0BBBF7B728ED871F003EEE17 /* ColorCompatibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCompatibility.swift; sourceTree = "<group>"; };
@@ -342,7 +340,6 @@
 		0BBBF7AE28ED86F0003EEE17 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				0BBBF7AF28ED86F0003EEE17 /* ListBaseCollectionViewCell.swift */,
 				0BBBF7B028ED86F0003EEE17 /* ListCollectionViewCell.swift */,
 			);
 			path = Cells;
@@ -783,7 +780,6 @@
 				0BBBF80528EEB6F2003EEE17 /* MovieListType.swift in Sources */,
 				0BBBF7E328EDCCCA003EEE17 /* DecoderHelper.swift in Sources */,
 				0BBBF84428F03F79003EEE17 /* FavouriteFactory.swift in Sources */,
-				0BBBF7B228ED86F0003EEE17 /* ListBaseCollectionViewCell.swift in Sources */,
 				0BBBF83128EFFE9D003EEE17 /* CastCollectionViewCell.swift in Sources */,
 				0BBBF81F28EFFC58003EEE17 /* ActivityIndicator.swift in Sources */,
 				0BBBF7E628EDCCCA003EEE17 /* NetworkLoader.swift in Sources */,

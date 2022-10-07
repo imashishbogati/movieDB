@@ -20,7 +20,7 @@ class MovieListView: UIView {
     let headingLabel: UILabel = {
         let label = UILabel()
         label.text = "Popular"
-        label.textColor = .black
+        label.textColor = ColorCompatibility.label
         label.font = .systemFont(ofSize: 20, weight: .medium)
         return label
     }()
@@ -29,7 +29,7 @@ class MovieListView: UIView {
         let button = UIButton()
         button.setTitle("View all", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(ColorCompatibility.label, for: .normal)
         return button
     }()
     

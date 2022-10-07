@@ -8,7 +8,7 @@
 import UIKit
 
 
-class ListCollectionViewCell: ListBaseCollectionViewCell {
+class ListCollectionViewCell: UICollectionViewCell {
     
     // MARK: - UI
     let posterImageView: UIImageView = {
@@ -24,13 +24,21 @@ class ListCollectionViewCell: ListBaseCollectionViewCell {
         let label = UILabel()
         label.text = "Prodigal Son"
         label.numberOfLines = 1
-        label.textColor = .black
+        label.textColor = ColorCompatibility.label
         label.font = .systemFont(ofSize: 14, weight: .medium)
         return label
     }()
     
-    override func setupViews() {
-        super.setupViews()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupViews()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+   private func setupViews() {
         contentView.layer.cornerRadius = 5
         contentView.clipsToBounds = true
         setupHierarchy()
