@@ -33,6 +33,7 @@ final class HomeViewControllerTests: XCTestCase {
         sut.loadViewIfNeeded()
         sut.didFailed(error: .noData)
         XCTAssertEqual(sut.scrollView.isHidden, true)
+        XCTAssertEqual(sut.navigationController?.topViewController?.contains(sut.emptyView), true)
     }
     
     func test_movieListView_delegateMethodErrorNil_shouldShowContent() throws {
@@ -40,6 +41,7 @@ final class HomeViewControllerTests: XCTestCase {
         sut.loadViewIfNeeded()
         sut.didFailed(error: nil)
         XCTAssertEqual(sut.scrollView.isHidden, false)
+        XCTAssertEqual(sut.navigationController?.topViewController?.contains(sut.emptyView), false)
     }
     
 }
