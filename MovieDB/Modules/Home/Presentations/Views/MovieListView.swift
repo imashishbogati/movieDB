@@ -11,6 +11,7 @@ import UIKit
 
 protocol MovieListViewDelegate: NSObject {
     func didFailed(error: NetworkError?)
+    func didTapMovie(movieID: Int?)
 }
 
 class MovieListView: UIView {
@@ -147,6 +148,6 @@ extension MovieListView: UICollectionViewDelegate, UICollectionViewDelegateFlowL
     
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        delegate?.didTapMovie(movieID: movieLists?.results[indexPath.item].id)
     }
 }

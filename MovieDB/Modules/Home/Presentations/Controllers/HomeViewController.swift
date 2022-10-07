@@ -158,4 +158,11 @@ extension HomeViewController: MovieListViewDelegate {
             scrollView.isHidden = false
         }
     }
+    
+    func didTapMovie(movieID: Int?) {
+        if let movieID {
+            let movieDetailsVC = MovieDetailsFactory.make(movieID: movieID)
+            show(movieDetailsVC, sender: self)
+        }
+    }
 }

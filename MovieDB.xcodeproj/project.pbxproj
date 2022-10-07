@@ -53,6 +53,10 @@
 		0BBBF81828EFC410003EEE17 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0BBBF81728EFC410003EEE17 /* SDWebImage */; };
 		0BBBF81B28EFE648003EEE17 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF81A28EFE648003EEE17 /* EmptyView.swift */; };
 		0BBBF81F28EFFC58003EEE17 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF81E28EFFC58003EEE17 /* ActivityIndicator.swift */; };
+		0BBBF82928EFFE71003EEE17 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF82828EFFE71003EEE17 /* MovieDetailsViewController.swift */; };
+		0BBBF82F28EFFE9D003EEE17 /* CaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF82A28EFFE9D003EEE17 /* CaseListView.swift */; };
+		0BBBF83128EFFE9D003EEE17 /* CastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF82D28EFFE9D003EEE17 /* CastCollectionViewCell.swift */; };
+		0BBBF83428F000C8003EEE17 /* MovieDetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF83328F000C8003EEE17 /* MovieDetailsFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +125,10 @@
 		0BBBF81428EF2ADE003EEE17 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		0BBBF81A28EFE648003EEE17 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		0BBBF81E28EFFC58003EEE17 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		0BBBF82828EFFE71003EEE17 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		0BBBF82A28EFFE9D003EEE17 /* CaseListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseListView.swift; sourceTree = "<group>"; };
+		0BBBF82D28EFFE9D003EEE17 /* CastCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastCollectionViewCell.swift; sourceTree = "<group>"; };
+		0BBBF83328F000C8003EEE17 /* MovieDetailsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +247,7 @@
 		0BBBF7A228ED85FA003EEE17 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0BBBF82028EFFE0C003EEE17 /* MovieDetails */,
 				0BBBF7A428ED8639003EEE17 /* Search */,
 				0BBBF7A328ED8625003EEE17 /* Home */,
 			);
@@ -477,6 +486,81 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		0BBBF82028EFFE0C003EEE17 /* MovieDetails */ = {
+			isa = PBXGroup;
+			children = (
+				0BBBF82328EFFE1D003EEE17 /* Data */,
+				0BBBF82228EFFE17003EEE17 /* Domain */,
+				0BBBF82128EFFE13003EEE17 /* Presentations */,
+			);
+			path = MovieDetails;
+			sourceTree = "<group>";
+		};
+		0BBBF82128EFFE13003EEE17 /* Presentations */ = {
+			isa = PBXGroup;
+			children = (
+				0BBBF82728EFFE38003EEE17 /* Factory */,
+				0BBBF82628EFFE31003EEE17 /* ViewModels */,
+				0BBBF82528EFFE2E003EEE17 /* Views */,
+				0BBBF82428EFFE29003EEE17 /* Controllers */,
+			);
+			path = Presentations;
+			sourceTree = "<group>";
+		};
+		0BBBF82228EFFE17003EEE17 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		0BBBF82328EFFE1D003EEE17 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0BBBF82428EFFE29003EEE17 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0BBBF82828EFFE71003EEE17 /* MovieDetailsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0BBBF82528EFFE2E003EEE17 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0BBBF82A28EFFE9D003EEE17 /* CaseListView.swift */,
+				0BBBF82C28EFFE9D003EEE17 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0BBBF82628EFFE31003EEE17 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0BBBF82728EFFE38003EEE17 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				0BBBF83328F000C8003EEE17 /* MovieDetailsFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		0BBBF82C28EFFE9D003EEE17 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0BBBF82D28EFFE9D003EEE17 /* CastCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -627,14 +711,18 @@
 				0BBBF7BD28ED871F003EEE17 /* AnchoredConstraints.swift in Sources */,
 				0BBBF7F328EDCF1D003EEE17 /* UseCaseInterface.swift in Sources */,
 				0BBBF7FD28EDD3BF003EEE17 /* MovieListUseCase.swift in Sources */,
+				0BBBF83428F000C8003EEE17 /* MovieDetailsFactory.swift in Sources */,
 				0BBBF7EC28EDCECA003EEE17 /* MovieListRequest.swift in Sources */,
 				0BBBF7B128ED86F0003EEE17 /* MovieListView.swift in Sources */,
 				0BBBF80828EEC538003EEE17 /* AlertControllerFactory.swift in Sources */,
 				0BBBF80528EEB6F2003EEE17 /* MovieListType.swift in Sources */,
 				0BBBF7E328EDCCCA003EEE17 /* DecoderHelper.swift in Sources */,
 				0BBBF7B228ED86F0003EEE17 /* ListBaseCollectionViewCell.swift in Sources */,
+				0BBBF83128EFFE9D003EEE17 /* CastCollectionViewCell.swift in Sources */,
 				0BBBF81F28EFFC58003EEE17 /* ActivityIndicator.swift in Sources */,
 				0BBBF7E628EDCCCA003EEE17 /* NetworkLoader.swift in Sources */,
+				0BBBF82928EFFE71003EEE17 /* MovieDetailsViewController.swift in Sources */,
+				0BBBF82F28EFFE9D003EEE17 /* CaseListView.swift in Sources */,
 				0BBBF7C728ED895A003EEE17 /* HomeFactory.swift in Sources */,
 				0BBBF7EA28EDCDDD003EEE17 /* MovieEndPoints.swift in Sources */,
 				0BBBF7E428EDCCCA003EEE17 /* EncoderHelper.swift in Sources */,
