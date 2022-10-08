@@ -69,7 +69,6 @@ class MovieDetailsViewController: UIViewController {
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         setupHiearchy()
         setupLayout()
-        loadData()
     }
     
     private func loadData() {
@@ -123,7 +122,7 @@ class MovieDetailsViewController: UIViewController {
         
         overViewDescriptionLabel.anchor(top: overviewLabel.bottomAnchor, leading: contentView.leadingAnchor, bottom: nil, trailing: contentView.trailingAnchor, padding: .init(top: .marginTop - 10, left: 0, bottom: 0, right: 0))
         
-        castListView.anchor(top: overViewDescriptionLabel.bottomAnchor, leading: contentView.leadingAnchor, bottom: nil, trailing: contentView.trailingAnchor, padding: .init(top: .marginTop, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 200))
+        castListView.anchor(top: overViewDescriptionLabel.bottomAnchor, leading: contentView.leadingAnchor, bottom: contentView.bottomAnchor, trailing: contentView.trailingAnchor, padding: .init(top: .marginTop, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 200))
         
     }
     

@@ -36,14 +36,13 @@ class CastCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Functions
+    // MARK: - Private
     private func setupViews() {
         setupHierachy()
         setupLayout()
         self.castImageView.layer.cornerRadius = 50
         self.castImageView.clipsToBounds = true
     }
-    
     
     private func setupHierachy() {
         contentView.addSubview(castImageView)

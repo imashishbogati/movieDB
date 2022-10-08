@@ -36,6 +36,8 @@ class CaseListView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         return view
     }()
     
+    var viewModel: CastListViewModelInterface?
+    
     // MARK: - inits
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -47,11 +49,10 @@ class CaseListView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     
-    // MARK: - Functions
+    // MARK: - Private
     private func setupViews() {
         self.setupHiearchy()
         self.setupLayout()
-        
     }
     
     private func setupHiearchy() {
@@ -65,6 +66,7 @@ class CaseListView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         self.collectionView.anchor(top: self.headingLabel.bottomAnchor, leading: self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 10, left: 0, bottom: 0, right: 0))
     }
     
+    // MARK: - Public
     public func reloadData() {
         collectionView.reloadData()
     }

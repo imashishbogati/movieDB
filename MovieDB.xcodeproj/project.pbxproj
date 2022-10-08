@@ -67,6 +67,10 @@
 		0BBBF85628F06D66003EEE17 /* MovieWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF85528F06D66003EEE17 /* MovieWorker.swift */; };
 		0BBBF85A28F06E02003EEE17 /* MovieDetailsUseCaseInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF85928F06E02003EEE17 /* MovieDetailsUseCaseInterfaces.swift */; };
 		0BBBF85C28F07AD8003EEE17 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF85B28F07AD8003EEE17 /* CGFloat+Extensions.swift */; };
+		0BBBF85E28F1A1EA003EEE17 /* CastListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF85D28F1A1EA003EEE17 /* CastListViewModel.swift */; };
+		0BBBF86028F1A21A003EEE17 /* CastListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF85F28F1A21A003EEE17 /* CastListUseCase.swift */; };
+		0BBBF86228F1A23E003EEE17 /* CastListViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF86128F1A23E003EEE17 /* CastListViewModelInterface.swift */; };
+		0BBBF86828F1A34F003EEE17 /* MovieDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF86728F1A34F003EEE17 /* MovieDetailsViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +154,10 @@
 		0BBBF85528F06D66003EEE17 /* MovieWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieWorker.swift; sourceTree = "<group>"; };
 		0BBBF85928F06E02003EEE17 /* MovieDetailsUseCaseInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsUseCaseInterfaces.swift; sourceTree = "<group>"; };
 		0BBBF85B28F07AD8003EEE17 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
+		0BBBF85D28F1A1EA003EEE17 /* CastListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastListViewModel.swift; sourceTree = "<group>"; };
+		0BBBF85F28F1A21A003EEE17 /* CastListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastListUseCase.swift; sourceTree = "<group>"; };
+		0BBBF86128F1A23E003EEE17 /* CastListViewModelInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastListViewModelInterface.swift; sourceTree = "<group>"; };
+		0BBBF86728F1A34F003EEE17 /* MovieDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,8 +224,10 @@
 			isa = PBXGroup;
 			children = (
 				0BBBF80E28EEC9CC003EEE17 /* TestHelpers */,
-				0BBBF7CA28ED8A60003EEE17 /* HomeViewControllerTests.swift */,
-				0BBBF7D328ED98D8003EEE17 /* MovieListViewTest.swift */,
+				0BBBF86628F1A32A003EEE17 /* CastListViewTest */,
+				0BBBF86528F1A31D003EEE17 /* MovieDetailsTest */,
+				0BBBF86428F1A314003EEE17 /* MovieListViewTest */,
+				0BBBF86328F1A309003EEE17 /* HomeViewControllerTests */,
 			);
 			path = MovieDBTests;
 			sourceTree = "<group>";
@@ -551,6 +561,7 @@
 			isa = PBXGroup;
 			children = (
 				0BBBF83528F0023D003EEE17 /* MovieDetailsViewModel.swift */,
+				0BBBF85D28F1A1EA003EEE17 /* CastListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -575,6 +586,7 @@
 			isa = PBXGroup;
 			children = (
 				0BBBF83828F00265003EEE17 /* DetailsViewModelInterface.swift */,
+				0BBBF86128F1A23E003EEE17 /* CastListViewModelInterface.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -635,6 +647,7 @@
 			isa = PBXGroup;
 			children = (
 				0BBBF84F28F06D20003EEE17 /* MovieDetailsUseCase.swift */,
+				0BBBF85F28F1A21A003EEE17 /* CastListUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -662,6 +675,37 @@
 				0BBBF85928F06E02003EEE17 /* MovieDetailsUseCaseInterfaces.swift */,
 			);
 			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		0BBBF86328F1A309003EEE17 /* HomeViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				0BBBF7CA28ED8A60003EEE17 /* HomeViewControllerTests.swift */,
+			);
+			path = HomeViewControllerTests;
+			sourceTree = "<group>";
+		};
+		0BBBF86428F1A314003EEE17 /* MovieListViewTest */ = {
+			isa = PBXGroup;
+			children = (
+				0BBBF7D328ED98D8003EEE17 /* MovieListViewTest.swift */,
+			);
+			path = MovieListViewTest;
+			sourceTree = "<group>";
+		};
+		0BBBF86528F1A31D003EEE17 /* MovieDetailsTest */ = {
+			isa = PBXGroup;
+			children = (
+				0BBBF86728F1A34F003EEE17 /* MovieDetailsViewControllerTests.swift */,
+			);
+			path = MovieDetailsTest;
+			sourceTree = "<group>";
+		};
+		0BBBF86628F1A32A003EEE17 /* CastListViewTest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CastListViewTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -822,9 +866,11 @@
 				0BBBF7EC28EDCECA003EEE17 /* MovieListRequest.swift in Sources */,
 				0BBBF7B128ED86F0003EEE17 /* MovieListView.swift in Sources */,
 				0BBBF85A28F06E02003EEE17 /* MovieDetailsUseCaseInterfaces.swift in Sources */,
+				0BBBF86028F1A21A003EEE17 /* CastListUseCase.swift in Sources */,
 				0BBBF84A28F06CDA003EEE17 /* Person.swift in Sources */,
 				0BBBF80828EEC538003EEE17 /* AlertControllerFactory.swift in Sources */,
 				0BBBF84D28F06CDA003EEE17 /* Credit.swift in Sources */,
+				0BBBF86228F1A23E003EEE17 /* CastListViewModelInterface.swift in Sources */,
 				0BBBF80528EEB6F2003EEE17 /* MovieListType.swift in Sources */,
 				0BBBF7E328EDCCCA003EEE17 /* DecoderHelper.swift in Sources */,
 				0BBBF84428F03F79003EEE17 /* FavouriteFactory.swift in Sources */,
@@ -845,6 +891,7 @@
 				0BBBF81B28EFE648003EEE17 /* EmptyView.swift in Sources */,
 				0BBBF7E528EDCCCA003EEE17 /* NetworkError.swift in Sources */,
 				0BBBF80A28EEC725003EEE17 /* ListViewProtocol.swift in Sources */,
+				0BBBF85E28F1A1EA003EEE17 /* CastListViewModel.swift in Sources */,
 				0BBBF84128F03F36003EEE17 /* FavouritesViewController.swift in Sources */,
 				0BBBF7D228ED95F5003EEE17 /* MovieListViewModel.swift in Sources */,
 				0BBBF84C28F06CDA003EEE17 /* MovieDetailsRequest.swift in Sources */,
@@ -862,6 +909,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BBBF86828F1A34F003EEE17 /* MovieDetailsViewControllerTests.swift in Sources */,
 				0BBBF7D428ED98D8003EEE17 /* MovieListViewTest.swift in Sources */,
 				0BBBF7CB28ED8A60003EEE17 /* HomeViewControllerTests.swift in Sources */,
 				0BBBF81028EEC9D5003EEE17 /* TestHelpers.swift in Sources */,
