@@ -44,7 +44,6 @@
 		0BBBF80528EEB6F2003EEE17 /* MovieListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF80428EEB6F2003EEE17 /* MovieListType.swift */; };
 		0BBBF80828EEC538003EEE17 /* AlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF80728EEC538003EEE17 /* AlertControllerFactory.swift */; };
 		0BBBF80A28EEC725003EEE17 /* ListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF80928EEC725003EEE17 /* ListViewProtocol.swift */; };
-		0BBBF80D28EEC9AD003EEE17 /* ViewControllerPresentationSpy.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BBBF80C28EEC9AD003EEE17 /* ViewControllerPresentationSpy.xcframework */; };
 		0BBBF81028EEC9D5003EEE17 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF80F28EEC9D5003EEE17 /* TestHelpers.swift */; };
 		0BBBF81328EF2AC8003EEE17 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0BBBF81228EF2AC8003EEE17 /* SDWebImage */; };
 		0BBBF81528EF2ADE003EEE17 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF81428EF2ADE003EEE17 /* UIImageView+Extensions.swift */; };
@@ -167,7 +166,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BBBF81828EFC410003EEE17 /* SDWebImage in Frameworks */,
-				0BBBF80D28EEC9AD003EEE17 /* ViewControllerPresentationSpy.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

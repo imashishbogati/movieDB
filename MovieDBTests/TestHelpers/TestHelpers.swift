@@ -6,12 +6,6 @@
 //
 
 import Foundation
-import ViewControllerPresentationSpy
-
-func makeAlertVerifier() -> AlertVerifier {
-    return AlertVerifier()
-}
-
 
 func executeRunLoop() {
     return RunLoop.current.run(until: Date())

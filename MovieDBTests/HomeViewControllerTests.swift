@@ -6,7 +6,6 @@
 //
 
 import XCTest
-import ViewControllerPresentationSpy
 @testable import MovieDB
 
 final class HomeViewControllerTests: XCTestCase {
