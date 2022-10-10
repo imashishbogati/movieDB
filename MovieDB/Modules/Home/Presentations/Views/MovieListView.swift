@@ -58,9 +58,12 @@ class MovieListView: UIView {
     private var listType: MovieListType = .popular
 
     // MARK: - Life Cycle
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    required init(viewModel: MovieListViewModelInterface, listType: MovieListType) {
+        self.viewModel = viewModel
+        self.listType = listType
+        super.init(frame: .zero)
         setupViews()
+        loadData()
     }
     
     required init?(coder: NSCoder) {
@@ -118,11 +121,6 @@ class MovieListView: UIView {
     }
     
     // MARK: - Public
-    func listType(listType: MovieListType) {
-        self.listType = listType
-        loadData()
-    }
-    
     func reloadList() {
         loadData()
     }

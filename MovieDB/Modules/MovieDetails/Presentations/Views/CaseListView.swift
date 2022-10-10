@@ -36,12 +36,15 @@ class CaseListView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         return view
     }()
     
+    private var castList: Person?
     var viewModel: CastListViewModelInterface?
     
     // MARK: - inits
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    required init(viewModel: CastListViewModelInterface) {
+        self.viewModel = viewModel
+        super.init(frame: .zero)
         self.setupViews()
+        self.loadData()
     }
     
     required init?(coder: NSCoder) {
@@ -66,18 +69,29 @@ class CaseListView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         self.collectionView.anchor(top: self.headingLabel.bottomAnchor, leading: self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 10, left: 0, bottom: 0, right: 0))
     }
     
-    // MARK: - Public
-    public func reloadData() {
-        collectionView.reloadData()
+    private func loadData() {
+        viewModel?.getMovieCast(completion: { [weak self] response in
+            guard let self = self else {
+                return
+            }
+            switch response {
+            case .success(let castList):
+                self.castList = castList
+                self.collectionView.reloadData()
+            case .failure(let error):
+                debugPrint(error)
+            }
+        })
     }
     
     // MARK: - Delegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return castList?.cast.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CastCollectionViewCell.reuseIdentifier, for: indexPath) as? CastCollectionViewCell else { fatalError() }
+        cell.backgroundColor = .red
         return cell
     }
     

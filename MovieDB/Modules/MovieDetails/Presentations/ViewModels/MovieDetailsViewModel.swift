@@ -35,5 +35,7 @@ final class MovieDetailsViewModel: MovieDetailsViewModelInterface {
         }
     }
     
-    
+    func getMovieID() -> Int {
+        return self.movieID
+    }
 }

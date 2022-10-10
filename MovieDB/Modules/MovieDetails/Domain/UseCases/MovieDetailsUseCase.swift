@@ -9,7 +9,7 @@ import Foundation
 
 final class MovieDetailsUseCase: MovieDetailUseCaseInterface {
     
-    private var worker: MovieWorker
+    private var worker: MovieListWokerInterface
     
     init(worker: MovieWorker = MovieWorker()) {
         self.worker = worker

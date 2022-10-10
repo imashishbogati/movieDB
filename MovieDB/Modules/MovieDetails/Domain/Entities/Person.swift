@@ -10,7 +10,6 @@ import Foundation
 struct Person: Decodable {
     var id: Int?
     var cast: [Cast] = []
-    
 }
 
 struct Cast: Decodable {

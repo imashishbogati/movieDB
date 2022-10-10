@@ -18,12 +18,20 @@ class MovieDetailsViewController: UIViewController {
     let emptyView = EmptyView()
     
     var viewModel: MovieDetailsViewModelInterface?
+    var castViewModel: MovieCastUseCaseInterface?
     
     let posterImageView: UIImageView = {
         let view = UIImageView()
         view.contentMode = .scaleAspectFill
         view.isUserInteractionEnabled = true
         return view
+    }()
+    
+    let favouriteButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "heart")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        button.tintColor = .red
+        return button
     }()
     
     let overviewLabel: UILabel = {
@@ -47,7 +55,8 @@ class MovieDetailsViewController: UIViewController {
     }()
     
     lazy var castListView: CaseListView = {
-        let view = CaseListView()
+        let castVM = CastListViewModel(movieID: (viewModel?.getMovieID())!)
+        let view = CaseListView(viewModel: castVM)
         view.headingLabel.text = "Top Billed Cast"
         return view
     }()
@@ -66,7 +75,8 @@ class MovieDetailsViewController: UIViewController {
         view.backgroundColor = ColorCompatibility.secondarySystemBackground
         let backButton = UIBarButtonItem()
         backButton.title = ""
-        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        favouriteButton.addTarget(self, action: #selector(didTapFavouriteButton), for: .touchUpInside)
         setupHiearchy()
         setupLayout()
     }
@@ -104,6 +114,7 @@ class MovieDetailsViewController: UIViewController {
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
         contentView.addSubview(posterImageView)
+        posterImageView.addSubview(favouriteButton)
         contentView.addSubview(overviewLabel)
         contentView.addSubview(overViewDescriptionLabel)
         contentView.addSubview(castListView)
@@ -124,14 +135,25 @@ class MovieDetailsViewController: UIViewController {
         
         castListView.anchor(top: overViewDescriptionLabel.bottomAnchor, leading: contentView.leadingAnchor, bottom: contentView.bottomAnchor, trailing: contentView.trailingAnchor, padding: .init(top: .marginTop, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 200))
         
+        favouriteButton.anchor(top: nil,
+                               leading: nil,
+                               bottom: posterImageView.bottomAnchor,
+                               trailing: posterImageView.trailingAnchor,
+                               padding: .init(top: 0, left: 0, bottom: 10, right: 10),
+                               size: .init(width: 30, height: 30))
+        
     }
     
     // MARK: - Action
-    
     @objc
     func didTapRetryButton() {
         emptyView.removeFromSuperview()
         loadData()
+    }
+    
+    @objc
+    func didTapFavouriteButton() {
+        favouriteButton.setImage(UIImage(named: "heart.fill")?.withRenderingMode(.alwaysTemplate), for: .normal)
     }
     
     @objc

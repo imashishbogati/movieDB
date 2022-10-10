@@ -16,28 +16,29 @@ class HomeViewController: UIViewController {
     var searchController: UISearchController?
     
     lazy var popularMovieListView: MovieListView = {
-        let view = MovieListView()
-        view.viewModel = MovieListViewModel(useCase: MovieListUseCase(page: "1",
-                                                                      listType: .popular))
-        view.listType(listType: .popular)
+        let vm = MovieListViewModel(useCase: MovieListUseCase(page: "1",
+                                                              listType: .popular))
+        let view = MovieListView(viewModel: vm,
+                                 listType: .popular)
         view.delegate = self
         return view
     }()
     
     lazy var trendingMovieListView: MovieListView = {
-        let view = MovieListView()
-        view.viewModel = MovieListViewModel(useCase: MovieListUseCase(page: "1",
+        let viewModel = MovieListViewModel(useCase: MovieListUseCase(page: "1",
                                                                       listType: .trending))
-        view.listType(listType: .trending)
+        let view = MovieListView(viewModel: viewModel,
+                                 listType: .trending)
+       
         view.delegate = self
         return view
     }()
     
     lazy var discoverMovieListView: MovieListView = {
-        let view = MovieListView()
-        view.viewModel = MovieListViewModel(useCase: MovieListUseCase(page: "1",
+        let viewModel = MovieListViewModel(useCase: MovieListUseCase(page: "1",
                                                                       listType: .nowPlaying))
-        view.listType(listType: .nowPlaying)
+        let view = MovieListView(viewModel: viewModel,
+                                 listType: .nowPlaying)
         view.delegate = self
         return view
     }()

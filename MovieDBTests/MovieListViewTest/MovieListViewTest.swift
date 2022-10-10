@@ -19,7 +19,6 @@ final class MovieListViewTest: XCTestCase {
         let sut = try makeSut()
         let vm = ListViewModelStubs()
         sut.viewModel = vm
-        sut.listType(listType: .popular)
         XCTAssertEqual(sut.headingLabel.text, "test")
     }
     
@@ -28,18 +27,11 @@ final class MovieListViewTest: XCTestCase {
         XCTAssertEqual(sut.viewAllButton.titleLabel?.text, "View all")
     }
     
-    func test_collectionView_initalSetup() throws {
-        let sut = try makeSut()
-        XCTAssertNotNil(sut.collectionView.delegate, "Delegate")
-        XCTAssertNotNil(sut.collectionView.dataSource, "Datasource")
-        XCTAssertEqual(sut.numberOfItemsInList(for: 0), 0)
-    }
     
     func test_loadData_withMovieResponse_numberOfItemShouldBeOne() throws {
         let sut = try makeSut()
         let vm = ListViewModelStubs()
         sut.viewModel = vm
-        sut.listType(listType: .trending)
         XCTAssertEqual(sut.numberOfItemsInList(for: 0), 1)
         let cell = sut.listCell(for: 0)
         XCTAssertEqual(cell?.titleLabel.text, "Test Orginal title")
@@ -61,7 +53,8 @@ extension MovieListView {
 }
 
 private func makeSut() throws -> MovieListView {
-    let listView = MovieListView()
+    let listView = MovieListView(viewModel: ListViewModelStubs(),
+                                 listType: .trending)
     return try XCTUnwrap(listView)
 }
 

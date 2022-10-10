@@ -46,7 +46,6 @@ final class HomeViewControllerTests: XCTestCase {
     func test_movieListTap_shouldPushDetailsVC() throws {
         let sut = try makeSut()
         sut.loadViewIfNeeded()
-        sut.trendingMovieListView.listType(listType: .trending)
         sut.didTapMovie(movieID: 1)
         executeRunLoop()
         XCTAssertEqual(sut.navigationController?.viewControllers.count, 2)

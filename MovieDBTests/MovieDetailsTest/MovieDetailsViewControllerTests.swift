@@ -79,6 +79,10 @@ private func makeMovieDetails() -> MovieDetails {
 
 
 private class MovieDetailsViewModelStub: MovieDetailsViewModelInterface {
+    func getMovieID() -> Int {
+        return 0
+    }
+    
     
     var completion: ((Result<MovieDetails, NetworkError>) -> Void)?
     var callCount: Int = 0

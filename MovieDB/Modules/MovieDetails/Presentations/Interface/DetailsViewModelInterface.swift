@@ -9,4 +9,5 @@ import Foundation
 
 protocol MovieDetailsViewModelInterface {
     func getMovieDetails(completion: @escaping (Result<MovieDetails, NetworkError>) -> Void)
+    func getMovieID() -> Int
 }

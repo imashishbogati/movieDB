@@ -9,7 +9,7 @@ import Foundation
 
 struct MovieEndPoint {
     var path: String
-    var page: String
+    var page: String = "1"
     var queryItems: [URLQueryItem] = []
     
     init(path: String,

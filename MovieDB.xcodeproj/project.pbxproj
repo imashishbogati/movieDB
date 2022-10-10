@@ -71,6 +71,7 @@
 		0BBBF86028F1A21A003EEE17 /* CastListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF85F28F1A21A003EEE17 /* CastListUseCase.swift */; };
 		0BBBF86228F1A23E003EEE17 /* CastListViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF86128F1A23E003EEE17 /* CastListViewModelInterface.swift */; };
 		0BBBF86828F1A34F003EEE17 /* MovieDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF86728F1A34F003EEE17 /* MovieDetailsViewControllerTests.swift */; };
+		0BBBF86A28F3DB39003EEE17 /* MovieCastUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF86928F3DB39003EEE17 /* MovieCastUseCaseInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +159,7 @@
 		0BBBF85F28F1A21A003EEE17 /* CastListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastListUseCase.swift; sourceTree = "<group>"; };
 		0BBBF86128F1A23E003EEE17 /* CastListViewModelInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastListViewModelInterface.swift; sourceTree = "<group>"; };
 		0BBBF86728F1A34F003EEE17 /* MovieDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewControllerTests.swift; sourceTree = "<group>"; };
+		0BBBF86928F3DB39003EEE17 /* MovieCastUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCastUseCaseInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -673,6 +675,7 @@
 			isa = PBXGroup;
 			children = (
 				0BBBF85928F06E02003EEE17 /* MovieDetailsUseCaseInterfaces.swift */,
+				0BBBF86928F3DB39003EEE17 /* MovieCastUseCaseInterface.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -890,6 +893,7 @@
 				0BBBF77028ED8531003EEE17 /* AppDelegate.swift in Sources */,
 				0BBBF81B28EFE648003EEE17 /* EmptyView.swift in Sources */,
 				0BBBF7E528EDCCCA003EEE17 /* NetworkError.swift in Sources */,
+				0BBBF86A28F3DB39003EEE17 /* MovieCastUseCaseInterface.swift in Sources */,
 				0BBBF80A28EEC725003EEE17 /* ListViewProtocol.swift in Sources */,
 				0BBBF85E28F1A1EA003EEE17 /* CastListViewModel.swift in Sources */,
 				0BBBF84128F03F36003EEE17 /* FavouritesViewController.swift in Sources */,
