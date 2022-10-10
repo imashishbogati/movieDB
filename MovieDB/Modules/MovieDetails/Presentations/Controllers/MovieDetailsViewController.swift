@@ -54,9 +54,9 @@ class MovieDetailsViewController: UIViewController {
         return label
     }()
     
-    lazy var castListView: CaseListView = {
+    lazy var castListView: CastListView = {
         let castVM = CastListViewModel(movieID: (viewModel?.getMovieID())!)
-        let view = CaseListView(viewModel: castVM)
+        let view = CastListView(viewModel: castVM)
         view.headingLabel.text = "Top Billed Cast"
         return view
     }()

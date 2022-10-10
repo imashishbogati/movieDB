@@ -51,7 +51,7 @@
 		0BBBF81B28EFE648003EEE17 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF81A28EFE648003EEE17 /* EmptyView.swift */; };
 		0BBBF81F28EFFC58003EEE17 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF81E28EFFC58003EEE17 /* ActivityIndicator.swift */; };
 		0BBBF82928EFFE71003EEE17 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF82828EFFE71003EEE17 /* MovieDetailsViewController.swift */; };
-		0BBBF82F28EFFE9D003EEE17 /* CaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF82A28EFFE9D003EEE17 /* CaseListView.swift */; };
+		0BBBF82F28EFFE9D003EEE17 /* CastListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF82A28EFFE9D003EEE17 /* CastListView.swift */; };
 		0BBBF83128EFFE9D003EEE17 /* CastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF82D28EFFE9D003EEE17 /* CastCollectionViewCell.swift */; };
 		0BBBF83428F000C8003EEE17 /* MovieDetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF83328F000C8003EEE17 /* MovieDetailsFactory.swift */; };
 		0BBBF83628F0023D003EEE17 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF83528F0023D003EEE17 /* MovieDetailsViewModel.swift */; };
@@ -72,6 +72,7 @@
 		0BBBF86228F1A23E003EEE17 /* CastListViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF86128F1A23E003EEE17 /* CastListViewModelInterface.swift */; };
 		0BBBF86828F1A34F003EEE17 /* MovieDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF86728F1A34F003EEE17 /* MovieDetailsViewControllerTests.swift */; };
 		0BBBF86A28F3DB39003EEE17 /* MovieCastUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF86928F3DB39003EEE17 /* MovieCastUseCaseInterface.swift */; };
+		0BBBF89628F4722D003EEE17 /* CastListViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF89528F4722D003EEE17 /* CastListViewTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,7 +140,7 @@
 		0BBBF81A28EFE648003EEE17 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		0BBBF81E28EFFC58003EEE17 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		0BBBF82828EFFE71003EEE17 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
-		0BBBF82A28EFFE9D003EEE17 /* CaseListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseListView.swift; sourceTree = "<group>"; };
+		0BBBF82A28EFFE9D003EEE17 /* CastListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastListView.swift; sourceTree = "<group>"; };
 		0BBBF82D28EFFE9D003EEE17 /* CastCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastCollectionViewCell.swift; sourceTree = "<group>"; };
 		0BBBF83328F000C8003EEE17 /* MovieDetailsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsFactory.swift; sourceTree = "<group>"; };
 		0BBBF83528F0023D003EEE17 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
@@ -160,6 +161,7 @@
 		0BBBF86128F1A23E003EEE17 /* CastListViewModelInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastListViewModelInterface.swift; sourceTree = "<group>"; };
 		0BBBF86728F1A34F003EEE17 /* MovieDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewControllerTests.swift; sourceTree = "<group>"; };
 		0BBBF86928F3DB39003EEE17 /* MovieCastUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCastUseCaseInterface.swift; sourceTree = "<group>"; };
+		0BBBF89528F4722D003EEE17 /* CastListViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastListViewTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -553,7 +555,7 @@
 		0BBBF82528EFFE2E003EEE17 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0BBBF82A28EFFE9D003EEE17 /* CaseListView.swift */,
+				0BBBF82A28EFFE9D003EEE17 /* CastListView.swift */,
 				0BBBF82C28EFFE9D003EEE17 /* Cells */,
 			);
 			path = Views;
@@ -707,6 +709,7 @@
 		0BBBF86628F1A32A003EEE17 /* CastListViewTest */ = {
 			isa = PBXGroup;
 			children = (
+				0BBBF89528F4722D003EEE17 /* CastListViewTest.swift */,
 			);
 			path = CastListViewTest;
 			sourceTree = "<group>";
@@ -881,7 +884,7 @@
 				0BBBF81F28EFFC58003EEE17 /* ActivityIndicator.swift in Sources */,
 				0BBBF7E628EDCCCA003EEE17 /* NetworkLoader.swift in Sources */,
 				0BBBF82928EFFE71003EEE17 /* MovieDetailsViewController.swift in Sources */,
-				0BBBF82F28EFFE9D003EEE17 /* CaseListView.swift in Sources */,
+				0BBBF82F28EFFE9D003EEE17 /* CastListView.swift in Sources */,
 				0BBBF83928F00265003EEE17 /* DetailsViewModelInterface.swift in Sources */,
 				0BBBF7C728ED895A003EEE17 /* HomeFactory.swift in Sources */,
 				0BBBF85C28F07AD8003EEE17 /* CGFloat+Extensions.swift in Sources */,
@@ -915,6 +918,7 @@
 			files = (
 				0BBBF86828F1A34F003EEE17 /* MovieDetailsViewControllerTests.swift in Sources */,
 				0BBBF7D428ED98D8003EEE17 /* MovieListViewTest.swift in Sources */,
+				0BBBF89628F4722D003EEE17 /* CastListViewTest.swift in Sources */,
 				0BBBF7CB28ED8A60003EEE17 /* HomeViewControllerTests.swift in Sources */,
 				0BBBF81028EEC9D5003EEE17 /* TestHelpers.swift in Sources */,
 			);

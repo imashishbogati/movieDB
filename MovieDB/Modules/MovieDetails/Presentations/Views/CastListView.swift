@@ -7,11 +7,11 @@
 
 import UIKit
 
-class CaseListView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class CastListView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   
     let headingLabel: UILabel = {
         let label = UILabel()
-        label.text = "Popular"
+        label.text = ""
         label.textColor = ColorCompatibility.label
         label.font = .systemFont(ofSize: 20, weight: .medium)
         return label

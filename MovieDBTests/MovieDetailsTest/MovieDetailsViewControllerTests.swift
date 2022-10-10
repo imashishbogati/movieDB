@@ -62,8 +62,6 @@ final class MovieDetailsViewControllerTests: XCTestCase {
 
 private func makeSut() throws -> MovieDetailsViewController {
     let sut = try XCTUnwrap(MovieDetailsViewController())
-    let vm = MovieDetailsViewModelStub()
-    sut.viewModel = vm
     return sut
 }
 
@@ -80,9 +78,8 @@ private func makeMovieDetails() -> MovieDetails {
 
 private class MovieDetailsViewModelStub: MovieDetailsViewModelInterface {
     func getMovieID() -> Int {
-        return 0
+        return 1
     }
-    
     
     var completion: ((Result<MovieDetails, NetworkError>) -> Void)?
     var callCount: Int = 0

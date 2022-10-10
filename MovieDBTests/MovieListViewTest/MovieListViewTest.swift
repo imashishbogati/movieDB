@@ -22,6 +22,13 @@ final class MovieListViewTest: XCTestCase {
         XCTAssertEqual(sut.headingLabel.text, "test")
     }
     
+    func test_collectionView_initalSetup() throws {
+        let sut = try makeSut()
+        XCTAssertNotNil(sut.collectionView.delegate, "Delegate")
+        XCTAssertNotNil(sut.collectionView.dataSource, "Datasource")
+        XCTAssertEqual(sut.numberOfItemsInList(for: 0), 0)
+    }
+    
     func test_viewAllButtonTitle_shouldBeViewAll() throws {
         let sut = try makeSut()
         XCTAssertEqual(sut.viewAllButton.titleLabel?.text, "View all")
@@ -29,9 +36,9 @@ final class MovieListViewTest: XCTestCase {
     
     
     func test_loadData_withMovieResponse_numberOfItemShouldBeOne() throws {
-        let sut = try makeSut()
         let vm = ListViewModelStubs()
-        sut.viewModel = vm
+        let sut = try makeSut(viewModel: vm,
+                              listType: .trending)
         XCTAssertEqual(sut.numberOfItemsInList(for: 0), 1)
         let cell = sut.listCell(for: 0)
         XCTAssertEqual(cell?.titleLabel.text, "Test Orginal title")
@@ -52,9 +59,10 @@ extension MovieListView {
     }
 }
 
-private func makeSut() throws -> MovieListView {
-    let listView = MovieListView(viewModel: ListViewModelStubs(),
-                                 listType: .trending)
+private func makeSut(viewModel: MovieListViewModelInterface = ListViewModelSpy(),
+                     listType: MovieListType = .trending) throws -> MovieListView {
+    let listView = MovieListView(viewModel: viewModel,
+                                 listType: listType)
     return try XCTUnwrap(listView)
 }
 
@@ -77,6 +85,17 @@ private func makeMovieResult() -> Results {
 private func makeMovieResponse() -> MovieListResponse {
     return MovieListResponse(page: 1,
                              results: [makeMovieResult()])
+}
+
+private class ListViewModelSpy: MovieListViewModelInterface {
+    func getMovies(request: MovieListRequest,
+                   completion: @escaping (Result<MovieListResponse, NetworkError>) -> Void) {
+        
+    }
+    
+    func listTitle(list: MovieDB.MovieListType) -> String {
+        return "test"
+    }
 }
 
 private class ListViewModelStubs: MovieListViewModelInterface {
