@@ -53,7 +53,7 @@ class MovieListView: UIView {
     }()
     
     // MARK: - Ivars
-    var viewModel: MovieListViewModelInterface?
+    private var viewModel: MovieListViewModelInterface?
     private var movieLists: MovieListResponse?
     private var listType: MovieListType = .popular
 

@@ -16,9 +16,8 @@ final class MovieListViewTest: XCTestCase {
     }
     
     func test_headLabelWithFakesViewModel_shouldBeTest() throws {
-        let sut = try makeSut()
         let vm = ListViewModelStubs()
-        sut.viewModel = vm
+        let sut = try makeSut(viewModel: vm)
         XCTAssertEqual(sut.headingLabel.text, "test")
     }
     

@@ -37,7 +37,7 @@ class CastListView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     }()
     
     private var castList: Person?
-    var viewModel: CastListViewModelInterface?
+    private var viewModel: CastListViewModelInterface?
     
     // MARK: - inits
     required init(viewModel: CastListViewModelInterface) {
