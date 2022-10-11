@@ -56,4 +56,21 @@ class CastCollectionViewCell: UICollectionViewCell {
         
     }
     
+    // MARK: - Public
+    func loadData(model: Person?, index: Int) {
+        guard let model = model else {
+            return
+        }
+        let cast = model.cast[index]
+        if !model.cast.isEmpty {
+            titleLabel.text = cast.original_name ?? ""
+            self.castImageView.setImage(url: "\(cast.profile_path ?? "")") { [weak self] status in
+                if status == false {
+                    self?.castImageView.tintColor = .systemGray
+                    self?.castImageView.image = UIImage(named: "empty-user")
+                }
+            }
+        }
+    }
+    
 }

@@ -91,7 +91,7 @@ class CastListView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CastCollectionViewCell.reuseIdentifier, for: indexPath) as? CastCollectionViewCell else { fatalError() }
-        cell.backgroundColor = .red
+        cell.loadData(model: castList, index: indexPath.item)
         return cell
     }
     
