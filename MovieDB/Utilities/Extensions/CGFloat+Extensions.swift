@@ -5,10 +5,9 @@
 //  Created by Ashish Bogati on 07/10/2022.
 //
 
-import Foundation
+import UIKit
 
 // MARK: - CGFloat + Extensions
-
 extension CGFloat {
     static let marginTop: CGFloat = 20
     static let marginLeft: CGFloat = 20

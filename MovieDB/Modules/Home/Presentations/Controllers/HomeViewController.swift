@@ -153,7 +153,7 @@ extension HomeViewController: MovieListViewDelegate {
     }
     
     func didTapMovie(movieID: Int?) {
-        if let movieID {
+        if let movieID = movieID{
             let movieDetailsVM = MovieDetailsViewModel(movieID: movieID)
             let movieDetailsVC = MovieDetailsFactory.make(viewModel: movieDetailsVM)
             show(movieDetailsVC, sender: self)
