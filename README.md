@@ -1,4 +1,4 @@
-# movieDB
+# MovieDB
 
 Simple MovieDB APP using MVVM 
 
