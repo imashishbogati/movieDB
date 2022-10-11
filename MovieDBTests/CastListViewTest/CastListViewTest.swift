@@ -38,6 +38,16 @@ final class CastListViewTest: XCTestCase {
         XCTAssertEqual(sut.numberOfItemsInList(for: 0), 1)
     }
     
+    func test_getListWithValidResponse_shouldRenderListCell() throws {
+        let vm = MovieCastListViewModelStub()
+        let sut = try makeSut(viewModel: vm)
+        vm.completion?(.success(makePerson(id: 1)))
+        XCTAssertEqual(sut.numberOfItemsInList(for: 0), 1)
+        let cell = sut.castCell(for: 0)
+        XCTAssertEqual(cell?.titleLabel.text, "DUMMY")
+    }
+    
+    
     func test_getListWithFailureResponse_shouldNotRenderList() throws {
         let vm = MovieCastListViewModelStub()
         let sut = try makeSut(viewModel: vm)
@@ -51,6 +61,11 @@ extension CastListView {
     
     func numberOfItemsInList(for row: Int) -> Int? {
         return collectionView.numberOfItems(inSection: selectedSection)
+    }
+    
+    func castCell(for row: Int) -> CastCollectionViewCell? {
+        let indexPath = IndexPath(row: row, section: selectedSection)
+        return collectionView.dataSource?.collectionView(collectionView, cellForItemAt: indexPath) as? CastCollectionViewCell
     }
 }
 
