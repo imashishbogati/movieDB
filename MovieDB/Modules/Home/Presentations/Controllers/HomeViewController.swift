@@ -192,7 +192,11 @@ extension HomeViewController: MovieListViewDelegate {
 
 extension HomeViewController: SearchResultViewDelegate {
     func didTapSearchResult(movie_id: Int?) {
-        searchController?.dismiss(animated: false, completion: {
+        searchController?.dismiss(animated: false, completion: { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.query = ""
             guard let movieID = movie_id else {
                 return
             }
