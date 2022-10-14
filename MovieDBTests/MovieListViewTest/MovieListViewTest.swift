@@ -6,7 +6,6 @@
 //
 
 import XCTest
-import ViewControllerPresentationSpy
 @testable import MovieDB
 
 final class MovieListViewTest: XCTestCase {
@@ -58,7 +57,7 @@ extension MovieListView {
     }
 }
 
-private func makeSut(viewModel: MovieListViewModelInterface = ListViewModelSpy(),
+private func makeSut(viewModel: MovieListViewModelProtocol = ListViewModelSpy(),
                      listType: MovieListType = .trending) throws -> MovieListView {
     let listView = MovieListView(viewModel: viewModel,
                                  listType: listType)
@@ -86,7 +85,7 @@ private func makeMovieResponse() -> MovieListResponse {
                              results: [makeMovieResult()])
 }
 
-private class ListViewModelSpy: MovieListViewModelInterface {
+private class ListViewModelSpy: MovieListViewModelProtocol {
     func getMovies(request: MovieListRequest,
                    completion: @escaping (Result<MovieListResponse, NetworkError>) -> Void) {
         
@@ -97,7 +96,7 @@ private class ListViewModelSpy: MovieListViewModelInterface {
     }
 }
 
-private class ListViewModelStubs: MovieListViewModelInterface {
+private class ListViewModelStubs: MovieListViewModelProtocol {
     
     func getMovies(request: MovieListRequest,
                    completion: @escaping (Result<MovieListResponse, NetworkError>) -> Void) {
