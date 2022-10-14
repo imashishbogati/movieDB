@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class MovieWorker: MovieListWokerInterface {
+final class MovieWorker: MovieListWokerProtocol {
     
     var networkService: NetworkService
     

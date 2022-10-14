@@ -11,9 +11,9 @@ import Foundation
 
 final class CastListUseCase: MovieCastUseCaseInterface {
     
-    private var worker: MovieListWokerInterface
+    private var worker: MovieListWokerProtocol
     
-    init(worker: MovieListWokerInterface = MovieWorker()) {
+    init(worker: MovieListWokerProtocol = MovieWorker()) {
         self.worker = worker
     }
     

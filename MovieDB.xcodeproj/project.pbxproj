@@ -38,7 +38,7 @@
 		0BBBF7EC28EDCECA003EEE17 /* MovieListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7EB28EDCECA003EEE17 /* MovieListRequest.swift */; };
 		0BBBF7EE28EDCEF1003EEE17 /* MovieListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7ED28EDCEF1003EEE17 /* MovieListResponse.swift */; };
 		0BBBF7F328EDCF1D003EEE17 /* MovieListUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7F228EDCF1D003EEE17 /* MovieListUseCaseInterface.swift */; };
-		0BBBF7F828EDCF96003EEE17 /* MovieListWorkerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7F728EDCF96003EEE17 /* MovieListWorkerInterface.swift */; };
+		0BBBF7F828EDCF96003EEE17 /* MovieListWokerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7F728EDCF96003EEE17 /* MovieListWokerProtocol.swift */; };
 		0BBBF7FD28EDD3BF003EEE17 /* MovieListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7FC28EDD3BF003EEE17 /* MovieListUseCase.swift */; };
 		0BBBF80028EEB12C003EEE17 /* DispatchHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7FF28EEB12C003EEE17 /* DispatchHelpers.swift */; };
 		0BBBF80528EEB6F2003EEE17 /* MovieListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF80428EEB6F2003EEE17 /* MovieListType.swift */; };
@@ -128,7 +128,7 @@
 		0BBBF7EB28EDCECA003EEE17 /* MovieListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListRequest.swift; sourceTree = "<group>"; };
 		0BBBF7ED28EDCEF1003EEE17 /* MovieListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListResponse.swift; sourceTree = "<group>"; };
 		0BBBF7F228EDCF1D003EEE17 /* MovieListUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListUseCaseInterface.swift; sourceTree = "<group>"; };
-		0BBBF7F728EDCF96003EEE17 /* MovieListWorkerInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListWorkerInterface.swift; sourceTree = "<group>"; };
+		0BBBF7F728EDCF96003EEE17 /* MovieListWokerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListWokerProtocol.swift; sourceTree = "<group>"; };
 		0BBBF7FC28EDD3BF003EEE17 /* MovieListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListUseCase.swift; sourceTree = "<group>"; };
 		0BBBF7FF28EEB12C003EEE17 /* DispatchHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchHelpers.swift; sourceTree = "<group>"; };
 		0BBBF80428EEB6F2003EEE17 /* MovieListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListType.swift; sourceTree = "<group>"; };
@@ -464,12 +464,12 @@
 			path = Interface;
 			sourceTree = "<group>";
 		};
-		0BBBF7F628EDCF86003EEE17 /* Interface */ = {
+		0BBBF7F628EDCF86003EEE17 /* Prototocols */ = {
 			isa = PBXGroup;
 			children = (
-				0BBBF7F728EDCF96003EEE17 /* MovieListWorkerInterface.swift */,
+				0BBBF7F728EDCF96003EEE17 /* MovieListWokerProtocol.swift */,
 			);
-			path = Interface;
+			path = Prototocols;
 			sourceTree = "<group>";
 		};
 		0BBBF7FE28EEB0DB003EEE17 /* DispatchHelpers */ = {
@@ -667,7 +667,7 @@
 		0BBBF85728F06D92003EEE17 /* DefaultWorkers */ = {
 			isa = PBXGroup;
 			children = (
-				0BBBF7F628EDCF86003EEE17 /* Interface */,
+				0BBBF7F628EDCF86003EEE17 /* Prototocols */,
 				0BBBF85528F06D66003EEE17 /* MovieWorker.swift */,
 			);
 			path = DefaultWorkers;
@@ -892,7 +892,7 @@
 				0BBBF7E428EDCCCA003EEE17 /* EncoderHelper.swift in Sources */,
 				0BBBF7BE28ED871F003EEE17 /* UIView+Layout.swift in Sources */,
 				0BBBF7C128ED8868003EEE17 /* UIViewController+Extensions.swift in Sources */,
-				0BBBF7F828EDCF96003EEE17 /* MovieListWorkerInterface.swift in Sources */,
+				0BBBF7F828EDCF96003EEE17 /* MovieListWokerProtocol.swift in Sources */,
 				0BBBF77028ED8531003EEE17 /* AppDelegate.swift in Sources */,
 				0BBBF81B28EFE648003EEE17 /* EmptyView.swift in Sources */,
 				0BBBF7E528EDCCCA003EEE17 /* NetworkError.swift in Sources */,

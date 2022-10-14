@@ -11,11 +11,11 @@ import Foundation
 
 final class MovieListUseCase: MovieListUseCaseInterface {
     
-    private var worker: MovieListWokerInterface
+    private var worker: MovieListWokerProtocol
     private var page: String
     private var listType: String
     
-    init(worker: MovieListWokerInterface = MovieWorker(),
+    init(worker: MovieListWokerProtocol = MovieWorker(),
          page: String,
          listType: MovieListType) {
         self.worker = worker
