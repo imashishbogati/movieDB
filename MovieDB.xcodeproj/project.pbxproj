@@ -42,7 +42,6 @@
 		0BBBF7FD28EDD3BF003EEE17 /* MovieListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7FC28EDD3BF003EEE17 /* MovieListUseCase.swift */; };
 		0BBBF80028EEB12C003EEE17 /* DispatchHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7FF28EEB12C003EEE17 /* DispatchHelpers.swift */; };
 		0BBBF80528EEB6F2003EEE17 /* MovieListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF80428EEB6F2003EEE17 /* MovieListType.swift */; };
-		0BBBF80828EEC538003EEE17 /* AlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF80728EEC538003EEE17 /* AlertControllerFactory.swift */; };
 		0BBBF80A28EEC725003EEE17 /* ListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF80928EEC725003EEE17 /* ListViewProtocol.swift */; };
 		0BBBF81028EEC9D5003EEE17 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF80F28EEC9D5003EEE17 /* TestHelpers.swift */; };
 		0BBBF81328EF2AC8003EEE17 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0BBBF81228EF2AC8003EEE17 /* SDWebImage */; };
@@ -132,7 +131,6 @@
 		0BBBF7FC28EDD3BF003EEE17 /* MovieListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListUseCase.swift; sourceTree = "<group>"; };
 		0BBBF7FF28EEB12C003EEE17 /* DispatchHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchHelpers.swift; sourceTree = "<group>"; };
 		0BBBF80428EEB6F2003EEE17 /* MovieListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListType.swift; sourceTree = "<group>"; };
-		0BBBF80728EEC538003EEE17 /* AlertControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerFactory.swift; sourceTree = "<group>"; };
 		0BBBF80928EEC725003EEE17 /* ListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewProtocol.swift; sourceTree = "<group>"; };
 		0BBBF80C28EEC9AD003EEE17 /* ViewControllerPresentationSpy.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ViewControllerPresentationSpy.xcframework; path = "../../../UnitTestingHelperLibary/ViewControllerPresentationSpy-6.1.0/ViewControllerPresentationSpy.xcframework"; sourceTree = "<group>"; };
 		0BBBF80F28EEC9D5003EEE17 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
@@ -259,7 +257,6 @@
 			isa = PBXGroup;
 			children = (
 				0BBBF81928EFE637003EEE17 /* CustomViews */,
-				0BBBF80628EEC52C003EEE17 /* Factory */,
 				0BBBF7FE28EEB0DB003EEE17 /* DispatchHelpers */,
 				0BBBF7E828EDCDD2003EEE17 /* EndPoints */,
 				0BBBF7D728EDCCC9003EEE17 /* NetworkHelper */,
@@ -478,14 +475,6 @@
 				0BBBF7FF28EEB12C003EEE17 /* DispatchHelpers.swift */,
 			);
 			path = DispatchHelpers;
-			sourceTree = "<group>";
-		};
-		0BBBF80628EEC52C003EEE17 /* Factory */ = {
-			isa = PBXGroup;
-			children = (
-				0BBBF80728EEC538003EEE17 /* AlertControllerFactory.swift */,
-			);
-			path = Factory;
 			sourceTree = "<group>";
 		};
 		0BBBF80B28EEC9AD003EEE17 /* Frameworks */ = {
@@ -874,7 +863,6 @@
 				0BBBF85A28F06E02003EEE17 /* MovieDetailsUseCaseInterfaces.swift in Sources */,
 				0BBBF86028F1A21A003EEE17 /* CastListUseCase.swift in Sources */,
 				0BBBF84A28F06CDA003EEE17 /* Person.swift in Sources */,
-				0BBBF80828EEC538003EEE17 /* AlertControllerFactory.swift in Sources */,
 				0BBBF84D28F06CDA003EEE17 /* Credit.swift in Sources */,
 				0BBBF86228F1A23E003EEE17 /* CastListViewModelInterface.swift in Sources */,
 				0BBBF80528EEB6F2003EEE17 /* MovieListType.swift in Sources */,
