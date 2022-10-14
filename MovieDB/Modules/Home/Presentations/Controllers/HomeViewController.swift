@@ -14,6 +14,8 @@ class HomeViewController: UIViewController {
     let scrollView = UIScrollView()
     let contentView = UIView()
     var searchController: UISearchController?
+    private var searchControllerResult: SearchResultViewController?
+    private var query: String?
     
     lazy var popularMovieListView: MovieListView = {
         let vm = MovieListViewModel(useCase: MovieListUseCase(page: "1",
@@ -66,11 +68,33 @@ class HomeViewController: UIViewController {
     private func setupNavigationBar() {
         title = "Home"
         let searchButton = UIButton(frame: .init(x: 0, y: 0, width: 20, height: 20))
+        searchButton.addTarget(self, action: #selector(didTapSerchButton), for: .touchUpInside)
         setNavigationRightImageButton(buttons: [searchButton], imageName: "Search")
     }
     
     private func configureEmptyView() {
         emptyView.retryButton.addTarget(self, action: #selector(didTapRetryButton), for: .touchUpInside)
+    }
+    
+    private func setupSearchBar() {
+        let movieSearchViewModel = MovieSearchViewModel(query: query ?? "")
+        searchControllerResult = SearchResultControllerFactory.make(viewModel: movieSearchViewModel)
+        searchControllerResult?.delegate = self
+        
+        searchController = UISearchController(searchResultsController: searchControllerResult)
+        guard let searchController = searchController else {
+            return
+        }
+        
+        searchController.delegate = self
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.searchBar.delegate = self
+        if #available(iOS 13.0, *) {
+            searchController.showsSearchResultsController = true
+        } else {
+            searchController.searchResultsController?.view.isHidden = false
+        }
+        present(searchController, animated: true)
     }
     
     private func setupScrollView() {
@@ -136,6 +160,11 @@ class HomeViewController: UIViewController {
         discoverMovieListView.reloadList()
     }
     
+    @objc
+    func didTapSerchButton() {
+        setupSearchBar()
+    }
+    
 }
 
 
@@ -159,4 +188,35 @@ extension HomeViewController: MovieListViewDelegate {
             show(movieDetailsVC, sender: self)
         }
     }
+}
+
+extension HomeViewController: SearchResultViewDelegate {
+    func didTapSearchResult(movie_id: Int?) {
+        searchController?.dismiss(animated: false, completion: {
+            guard let movieID = movie_id else {
+                return
+            }
+            let movieDetailsVM = MovieDetailsViewModel(movieID: movieID)
+            let movieDetailsVC = MovieDetailsFactory.make(viewModel: movieDetailsVM)
+            self.show(movieDetailsVC, sender: self)
+        })
+    }
+    
+}
+
+extension HomeViewController: UISearchControllerDelegate, UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        query = searchText
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        query = ""
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let vm = MovieSearchViewModel(query: query ?? "")
+        searchControllerResult?.viewModel = vm
+        searchControllerResult?.viewDidLoad()
+    }
+    
 }
