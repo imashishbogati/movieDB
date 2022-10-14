@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - CastListUseCase
 
-final class CastListUseCase: MovieCastUseCaseInterface {
+final class CastListUseCase: MovieCastUseCaseProtocol {
     
     private var worker: MovieListWokerProtocol
     

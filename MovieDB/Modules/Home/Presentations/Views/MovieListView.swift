@@ -53,12 +53,12 @@ class MovieListView: UIView {
     }()
     
     // MARK: - Ivars
-    private var viewModel: MovieListViewModelInterface?
+    private var viewModel: MovieListViewModelProtocol?
     private var movieLists: MovieListResponse?
     private var listType: MovieListType = .popular
 
     // MARK: - Life Cycle
-    required init(viewModel: MovieListViewModelInterface, listType: MovieListType) {
+    required init(viewModel: MovieListViewModelProtocol, listType: MovieListType) {
         self.viewModel = viewModel
         self.listType = listType
         super.init(frame: .zero)

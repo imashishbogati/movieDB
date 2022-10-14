@@ -9,12 +9,12 @@ import Foundation
 
 // MARK: - MovieDetailsViewModel
 
-final class MovieDetailsViewModel: MovieDetailsViewModelInterface {
+final class MovieDetailsViewModel: MovieDetailsViewModeProtocol {
     
-    private var useCase: MovieDetailUseCaseInterface
+    private var useCase: MovieDetailsUseCaseProtocol
     private var movieID: Int
     
-    init(movieID: Int, useCase: MovieDetailUseCaseInterface = MovieDetailsUseCase()) {
+    init(movieID: Int, useCase: MovieDetailsUseCaseProtocol = MovieDetailsUseCase()) {
         self.useCase = useCase
         self.movieID = movieID
     }

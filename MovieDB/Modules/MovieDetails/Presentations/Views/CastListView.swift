@@ -37,10 +37,10 @@ class CastListView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     }()
     
     private var castList: Person?
-    private var viewModel: CastListViewModelInterface?
+    private var viewModel: CastListViewModeProtocol?
     
     // MARK: - inits
-    required init(viewModel: CastListViewModelInterface) {
+    required init(viewModel: CastListViewModeProtocol) {
         self.viewModel = viewModel
         super.init(frame: .zero)
         self.setupViews()

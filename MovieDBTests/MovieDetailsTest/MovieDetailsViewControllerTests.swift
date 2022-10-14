@@ -76,7 +76,7 @@ private func makeMovieDetails() -> MovieDetails {
 
 
 
-private class MovieDetailsViewModelStub: MovieDetailsViewModelInterface {
+private class MovieDetailsViewModelStub: MovieDetailsViewModeProtocol {
     func getMovieID() -> Int {
         return 1
     }

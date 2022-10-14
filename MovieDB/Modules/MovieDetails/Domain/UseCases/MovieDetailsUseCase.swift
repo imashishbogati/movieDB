@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class MovieDetailsUseCase: MovieDetailUseCaseInterface {
+final class MovieDetailsUseCase: MovieDetailsUseCaseProtocol {
     
     private var worker: MovieListWokerProtocol
     

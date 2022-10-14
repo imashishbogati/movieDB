@@ -7,12 +7,12 @@
 
 import Foundation
 
-final class CastListViewModel: CastListViewModelInterface {
+final class CastListViewModel: CastListViewModeProtocol {
     
-    private var useCase: MovieCastUseCaseInterface
+    private var useCase: MovieCastUseCaseProtocol
     private var movieID: Int
     
-    init(useCase: MovieCastUseCaseInterface = CastListUseCase(), movieID: Int) {
+    init(useCase: MovieCastUseCaseProtocol = CastListUseCase(), movieID: Int) {
         self.useCase = useCase
         self.movieID = movieID
     }

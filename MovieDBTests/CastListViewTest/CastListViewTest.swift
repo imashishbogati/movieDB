@@ -69,7 +69,7 @@ extension CastListView {
     }
 }
 
-private func makeSut(viewModel: CastListViewModelInterface = MovieCastListViewModelSpy()) throws -> CastListView {
+private func makeSut(viewModel: CastListViewModeProtocol = MovieCastListViewModelSpy()) throws -> CastListView {
     let sut = try XCTUnwrap(CastListView(viewModel: viewModel))
     return sut
 }
@@ -84,14 +84,14 @@ private func makePerson(id: Int) -> Person {
     return Person(id: id, cast: [makeCast()])
 }
 
-private class MovieCastListViewModelSpy: CastListViewModelInterface {
+private class MovieCastListViewModelSpy: CastListViewModeProtocol {
     
     func getMovieCast(completion: @escaping (Result<Person, NetworkError>) -> Void) {
         
     }
 }
 
-private class MovieCastListViewModelStub: CastListViewModelInterface {
+private class MovieCastListViewModelStub: CastListViewModeProtocol {
     
     var callCount: Int = 0
     var completion: ((Result<Person, NetworkError>) -> Void)?

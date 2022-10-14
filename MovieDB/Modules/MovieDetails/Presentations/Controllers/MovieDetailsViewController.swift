@@ -17,8 +17,8 @@ class MovieDetailsViewController: UIViewController {
     let contentView = UIView()
     let emptyView = EmptyView()
     
-    var viewModel: MovieDetailsViewModelInterface?
-    var castViewModel: MovieCastUseCaseInterface?
+    var viewModel: MovieDetailsViewModeProtocol?
+    var castViewModel: MovieCastUseCaseProtocol?
     
     let posterImageView: UIImageView = {
         let view = UIImageView()

@@ -8,7 +8,7 @@
 import Foundation
 
 final class MovieDetailsFactory {
-    static func make(viewModel: MovieDetailsViewModelInterface) -> MovieDetailsViewController {
+    static func make(viewModel: MovieDetailsViewModeProtocol) -> MovieDetailsViewController {
         let detailVC = MovieDetailsViewController()
         detailVC.viewModel = viewModel
         return detailVC
