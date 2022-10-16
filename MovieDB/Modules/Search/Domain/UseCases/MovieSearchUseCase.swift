@@ -11,9 +11,9 @@ import Foundation
 
 final class MovieSearchUseCase: SearchUseCaseProtocol {
     
-    private var worker: MovieListWokerProtocol
+    private var worker: MovieService
     
-    init(worker: MovieListWokerProtocol = MovieWorker()) {
+    init(worker: MovieService = MovieServiceImplementation()) {
         self.worker = worker
     }
     

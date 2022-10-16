@@ -36,7 +36,7 @@
 		0BBBF7D228ED95F5003EEE17 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7D128ED95F5003EEE17 /* MovieListViewModel.swift */; };
 		0BBBF7D428ED98D8003EEE17 /* MovieListViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7D328ED98D8003EEE17 /* MovieListViewTest.swift */; };
 		0BBBF7E128EDCCCA003EEE17 /* URLSession+NetworkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7D828EDCCC9003EEE17 /* URLSession+NetworkLoader.swift */; };
-		0BBBF7E228EDCCCA003EEE17 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7D928EDCCC9003EEE17 /* NetworkService.swift */; };
+		0BBBF7E228EDCCCA003EEE17 /* NetworkServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7D928EDCCC9003EEE17 /* NetworkServiceImplementation.swift */; };
 		0BBBF7E328EDCCCA003EEE17 /* DecoderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7DB28EDCCC9003EEE17 /* DecoderHelper.swift */; };
 		0BBBF7E428EDCCCA003EEE17 /* EncoderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7DD28EDCCC9003EEE17 /* EncoderHelper.swift */; };
 		0BBBF7E528EDCCCA003EEE17 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7DE28EDCCC9003EEE17 /* NetworkError.swift */; };
@@ -46,7 +46,7 @@
 		0BBBF7EC28EDCECA003EEE17 /* MovieListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7EB28EDCECA003EEE17 /* MovieListRequest.swift */; };
 		0BBBF7EE28EDCEF1003EEE17 /* MovieListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7ED28EDCEF1003EEE17 /* MovieListResponse.swift */; };
 		0BBBF7F328EDCF1D003EEE17 /* MovieListUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7F228EDCF1D003EEE17 /* MovieListUseCaseProtocol.swift */; };
-		0BBBF7F828EDCF96003EEE17 /* MovieListWokerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7F728EDCF96003EEE17 /* MovieListWokerProtocol.swift */; };
+		0BBBF7F828EDCF96003EEE17 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7F728EDCF96003EEE17 /* MovieService.swift */; };
 		0BBBF7FD28EDD3BF003EEE17 /* MovieListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7FC28EDD3BF003EEE17 /* MovieListUseCase.swift */; };
 		0BBBF80028EEB12C003EEE17 /* DispatchHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF7FF28EEB12C003EEE17 /* DispatchHelpers.swift */; };
 		0BBBF80528EEB6F2003EEE17 /* MovieListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF80428EEB6F2003EEE17 /* MovieListType.swift */; };
@@ -71,7 +71,7 @@
 		0BBBF84C28F06CDA003EEE17 /* MovieDetailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF84828F06CDA003EEE17 /* MovieDetailsRequest.swift */; };
 		0BBBF84D28F06CDA003EEE17 /* Credit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF84928F06CDA003EEE17 /* Credit.swift */; };
 		0BBBF85028F06D20003EEE17 /* MovieDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF84F28F06D20003EEE17 /* MovieDetailsUseCase.swift */; };
-		0BBBF85628F06D66003EEE17 /* MovieWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF85528F06D66003EEE17 /* MovieWorker.swift */; };
+		0BBBF85628F06D66003EEE17 /* MovieServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF85528F06D66003EEE17 /* MovieServiceImplementation.swift */; };
 		0BBBF85A28F06E02003EEE17 /* MovieDetailsUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF85928F06E02003EEE17 /* MovieDetailsUseCaseProtocol.swift */; };
 		0BBBF85C28F07AD8003EEE17 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF85B28F07AD8003EEE17 /* CGFloat+Extensions.swift */; };
 		0BBBF85E28F1A1EA003EEE17 /* CastListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF85D28F1A1EA003EEE17 /* CastListViewModel.swift */; };
@@ -80,6 +80,7 @@
 		0BBBF86828F1A34F003EEE17 /* MovieDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF86728F1A34F003EEE17 /* MovieDetailsViewControllerTests.swift */; };
 		0BBBF86A28F3DB39003EEE17 /* MovieCastUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF86928F3DB39003EEE17 /* MovieCastUseCaseProtocol.swift */; };
 		0BBBF89628F4722D003EEE17 /* CastListViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBF89528F4722D003EEE17 /* CastListViewTest.swift */; };
+		F789A82028FC44ED00668468 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789A81F28FC44ED00668468 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,7 +134,7 @@
 		0BBBF7D128ED95F5003EEE17 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
 		0BBBF7D328ED98D8003EEE17 /* MovieListViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewTest.swift; sourceTree = "<group>"; };
 		0BBBF7D828EDCCC9003EEE17 /* URLSession+NetworkLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+NetworkLoader.swift"; sourceTree = "<group>"; };
-		0BBBF7D928EDCCC9003EEE17 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		0BBBF7D928EDCCC9003EEE17 /* NetworkServiceImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceImplementation.swift; sourceTree = "<group>"; };
 		0BBBF7DB28EDCCC9003EEE17 /* DecoderHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoderHelper.swift; sourceTree = "<group>"; };
 		0BBBF7DD28EDCCC9003EEE17 /* EncoderHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncoderHelper.swift; sourceTree = "<group>"; };
 		0BBBF7DE28EDCCC9003EEE17 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -143,7 +144,7 @@
 		0BBBF7EB28EDCECA003EEE17 /* MovieListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListRequest.swift; sourceTree = "<group>"; };
 		0BBBF7ED28EDCEF1003EEE17 /* MovieListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListResponse.swift; sourceTree = "<group>"; };
 		0BBBF7F228EDCF1D003EEE17 /* MovieListUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListUseCaseProtocol.swift; sourceTree = "<group>"; };
-		0BBBF7F728EDCF96003EEE17 /* MovieListWokerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListWokerProtocol.swift; sourceTree = "<group>"; };
+		0BBBF7F728EDCF96003EEE17 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		0BBBF7FC28EDD3BF003EEE17 /* MovieListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListUseCase.swift; sourceTree = "<group>"; };
 		0BBBF7FF28EEB12C003EEE17 /* DispatchHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchHelpers.swift; sourceTree = "<group>"; };
 		0BBBF80428EEB6F2003EEE17 /* MovieListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListType.swift; sourceTree = "<group>"; };
@@ -167,7 +168,7 @@
 		0BBBF84828F06CDA003EEE17 /* MovieDetailsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsRequest.swift; sourceTree = "<group>"; };
 		0BBBF84928F06CDA003EEE17 /* Credit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credit.swift; sourceTree = "<group>"; };
 		0BBBF84F28F06D20003EEE17 /* MovieDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsUseCase.swift; sourceTree = "<group>"; };
-		0BBBF85528F06D66003EEE17 /* MovieWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieWorker.swift; sourceTree = "<group>"; };
+		0BBBF85528F06D66003EEE17 /* MovieServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieServiceImplementation.swift; sourceTree = "<group>"; };
 		0BBBF85928F06E02003EEE17 /* MovieDetailsUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsUseCaseProtocol.swift; sourceTree = "<group>"; };
 		0BBBF85B28F07AD8003EEE17 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		0BBBF85D28F1A1EA003EEE17 /* CastListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastListViewModel.swift; sourceTree = "<group>"; };
@@ -176,6 +177,7 @@
 		0BBBF86728F1A34F003EEE17 /* MovieDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewControllerTests.swift; sourceTree = "<group>"; };
 		0BBBF86928F3DB39003EEE17 /* MovieCastUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCastUseCaseProtocol.swift; sourceTree = "<group>"; };
 		0BBBF89528F4722D003EEE17 /* CastListViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastListViewTest.swift; sourceTree = "<group>"; };
+		F789A81F28FC44ED00668468 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +325,7 @@
 		0BBBF76E28ED8531003EEE17 /* MovieDB */ = {
 			isa = PBXGroup;
 			children = (
+				F789A81E28FC405800668468 /* Services */,
 				0BBBF85428F06D58003EEE17 /* Common */,
 				0BBBF79F28ED85CF003EEE17 /* Applications */,
 				0BBBF7A028ED85DA003EEE17 /* Utilities */,
@@ -530,7 +533,7 @@
 			isa = PBXGroup;
 			children = (
 				0BBBF7D828EDCCC9003EEE17 /* URLSession+NetworkLoader.swift */,
-				0BBBF7D928EDCCC9003EEE17 /* NetworkService.swift */,
+				0BBBF7D928EDCCC9003EEE17 /* NetworkServiceImplementation.swift */,
 				0BBBF7DA28EDCCC9003EEE17 /* DecoderHelper */,
 				0BBBF7DC28EDCCC9003EEE17 /* EncoderHelper */,
 				0BBBF7DE28EDCCC9003EEE17 /* NetworkError.swift */,
@@ -573,12 +576,12 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		0BBBF7F628EDCF86003EEE17 /* Prototocols */ = {
+		0BBBF7F628EDCF86003EEE17 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				0BBBF7F728EDCF96003EEE17 /* MovieListWokerProtocol.swift */,
+				0BBBF7F728EDCF96003EEE17 /* MovieService.swift */,
 			);
-			path = Prototocols;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		0BBBF7FE28EEB0DB003EEE17 /* DispatchHelpers */ = {
@@ -760,18 +763,9 @@
 		0BBBF85428F06D58003EEE17 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				0BBBF85728F06D92003EEE17 /* DefaultWorkers */,
+				F789A81F28FC44ED00668468 /* Constants.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		0BBBF85728F06D92003EEE17 /* DefaultWorkers */ = {
-			isa = PBXGroup;
-			children = (
-				0BBBF7F628EDCF86003EEE17 /* Prototocols */,
-				0BBBF85528F06D66003EEE17 /* MovieWorker.swift */,
-			);
-			path = DefaultWorkers;
 			sourceTree = "<group>";
 		};
 		0BBBF85828F06DF4003EEE17 /* Protocols */ = {
@@ -813,6 +807,15 @@
 				0BBBF89528F4722D003EEE17 /* CastListViewTest.swift */,
 			);
 			path = CastListViewTest;
+			sourceTree = "<group>";
+		};
+		F789A81E28FC405800668468 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0BBBF85528F06D66003EEE17 /* MovieServiceImplementation.swift */,
+				0BBBF7F628EDCF86003EEE17 /* Protocols */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -960,10 +963,10 @@
 				0BBBF7D028ED94B5003EEE17 /* HomeProtocol.swift in Sources */,
 				0BBBF7EE28EDCEF1003EEE17 /* MovieListResponse.swift in Sources */,
 				0BBBF83C28F03E55003EEE17 /* TabBarViewController.swift in Sources */,
-				0BBBF85628F06D66003EEE17 /* MovieWorker.swift in Sources */,
+				0BBBF85628F06D66003EEE17 /* MovieServiceImplementation.swift in Sources */,
 				0BBBF81528EF2ADE003EEE17 /* UIImageView+Extensions.swift in Sources */,
 				0BBBF7B328ED86F0003EEE17 /* ListCollectionViewCell.swift in Sources */,
-				0BBBF7E228EDCCCA003EEE17 /* NetworkService.swift in Sources */,
+				0BBBF7E228EDCCCA003EEE17 /* NetworkServiceImplementation.swift in Sources */,
 				0BBBF7BD28ED871F003EEE17 /* AnchoredConstraints.swift in Sources */,
 				0BBBF7F328EDCF1D003EEE17 /* MovieListUseCaseProtocol.swift in Sources */,
 				0B18477E28F92FDE0027FA53 /* SearchUseCaseProtocol.swift in Sources */,
@@ -997,7 +1000,7 @@
 				0B18477928F92FDE0027FA53 /* MovieSearchViewModel.swift in Sources */,
 				0BBBF7BE28ED871F003EEE17 /* UIView+Layout.swift in Sources */,
 				0BBBF7C128ED8868003EEE17 /* UIViewController+Extensions.swift in Sources */,
-				0BBBF7F828EDCF96003EEE17 /* MovieListWokerProtocol.swift in Sources */,
+				0BBBF7F828EDCF96003EEE17 /* MovieService.swift in Sources */,
 				0BBBF77028ED8531003EEE17 /* AppDelegate.swift in Sources */,
 				0B18477F28F92FDE0027FA53 /* MovieSearchUseCase.swift in Sources */,
 				0BBBF81B28EFE648003EEE17 /* EmptyView.swift in Sources */,
@@ -1008,6 +1011,7 @@
 				0BBBF85E28F1A1EA003EEE17 /* CastListViewModel.swift in Sources */,
 				0BBBF84128F03F36003EEE17 /* FavouritesViewController.swift in Sources */,
 				0BBBF7D228ED95F5003EEE17 /* MovieListViewModel.swift in Sources */,
+				F789A82028FC44ED00668468 /* Constants.swift in Sources */,
 				0BBBF84C28F06CDA003EEE17 /* MovieDetailsRequest.swift in Sources */,
 				0BBBF77228ED8531003EEE17 /* SceneDelegate.swift in Sources */,
 				0BBBF80028EEB12C003EEE17 /* DispatchHelpers.swift in Sources */,

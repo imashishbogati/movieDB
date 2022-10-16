@@ -7,16 +7,17 @@
 
 import Foundation
 
-final class MovieWorker: MovieListWokerProtocol {
+class MovieServiceImplementation: MovieService {
     
-    var networkService: NetworkService
+    private let networkService: NetworkService
     
-    init(networkService: NetworkService = NetworkService()) {
+    init(networkService: NetworkService) {
         self.networkService = networkService
     }
     
     func getMovies(request: URLRequest,
                    completion: @escaping (Result<Data?, NetworkError>) -> Void) {
+        
         networkService.dataLoader.loadData(using: request) { data, response, error in
             
             if let response = response as? HTTPURLResponse {
@@ -38,6 +39,4 @@ final class MovieWorker: MovieListWokerProtocol {
             completion(.success(data))
         }
     }
-    
-    
 }

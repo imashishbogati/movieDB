@@ -9,16 +9,17 @@ import Foundation
 
 final class MovieDetailsUseCase: MovieDetailsUseCaseProtocol {
     
-    private var worker: MovieListWokerProtocol
+    private var movieService: MovieService
     
-    init(worker: MovieListWokerProtocol = MovieWorker()) {
-        self.worker = worker
+    init(service: MovieService) {
+        self.movieService = service
     }
     
+    //FIXME: Use URL request to create the request here
     private func createRequest(movieID: Int) -> URLRequest {
         let endPoint = MovieEndPoint(path: "movie/\(movieID)",
                                      page: "1")
-        return worker.networkService.createRequest(url: endPoint.createEndPoint().url, method: .get)!
+        return movieService.createRequest(url: endPoint.createEndPoint().url, method: .get)!
     }
     
     func getMovieDetails(movieID: Int,

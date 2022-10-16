@@ -9,13 +9,14 @@ import Foundation
 
 // MARK: - MovieListUseCase
 
-final class MovieListUseCase: MovieListUseCaseProtocol {
+class MovieListUseCase: MovieListUseCaseProtocol {
     
-    private var worker: MovieListWokerProtocol
+    private var worker: MovieService
     private var page: String
     private var listType: String
     
-    init(worker: MovieListWokerProtocol = MovieWorker(),
+    // FIXME: Use a factory class here and avoid using the Impelementation class directly
+    init(worker: MovieService = MovieServiceImplementation(networkService: <#NetworkService#>),
          page: String,
          listType: MovieListType) {
         self.worker = worker
@@ -25,7 +26,7 @@ final class MovieListUseCase: MovieListUseCaseProtocol {
     
     private func createRequest() -> URLRequest {
         let endPoint = MovieEndPoint(path: listType, page: page)
-        return worker.networkService.createRequest(url: endPoint.createEndPoint().url, method: .get)!
+        return worker.networkService.createRequest(requestEndpoint: endPoint.createEndPoint().url, method: .get)
     }
     
     func getMovies(request: MovieListRequest,
