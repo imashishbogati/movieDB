@@ -20,7 +20,7 @@ final class MovieListViewTest: XCTestCase {
         XCTAssertEqual(sut.headingLabel.text, "test")
     }
     
-    func test_collectionView_initalSetup() throws {
+    func test_hierarchy() throws {
         let sut = try makeSut()
         XCTAssertNotNil(sut.collectionView.delegate, "Delegate")
         XCTAssertNotNil(sut.collectionView.dataSource, "Datasource")
