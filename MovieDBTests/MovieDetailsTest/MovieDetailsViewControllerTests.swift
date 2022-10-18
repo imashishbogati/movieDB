@@ -43,10 +43,12 @@ final class MovieDetailsViewControllerTests: XCTestCase {
         let vm = MovieDetailsViewModelStub()
         sut.viewModel = vm
         sut.loadViewIfNeeded()
-        vm.completion?(.failure(.noData))
+        vm.completion?(.failure(.init(forRequestURL: URL(string: "https:www.dummy.com")!,
+                                               errorMessage: "No Data",
+                                               forStatusCode: 200)))
         XCTAssertEqual(vm.callCount, 1)
         XCTAssertEqual(sut.scrollView.isHidden, true)
-        XCTAssertEqual(sut.emptyView.titleLabel.text, "The operation couldn’t be completed. (MovieDB.NetworkError error 2.)")
+        XCTAssertEqual(sut.emptyView.titleLabel.text, "No Data")
     }
     
     func test_emptyViewTapRetryButton_shouldRetry() throws {
@@ -54,7 +56,7 @@ final class MovieDetailsViewControllerTests: XCTestCase {
         let vm = MovieDetailsViewModelStub()
         sut.viewModel = vm
         sut.loadViewIfNeeded()
-        vm.completion?(.failure(.noData))
+        vm.completion?(.failure(.init(forRequestURL: URL(string: "https:www.dummy.com")!, errorMessage: "No Data", forStatusCode: 200)))
         tap(sut.emptyView.retryButton)
         XCTAssertEqual(vm.callCount, 2)
     }
@@ -62,6 +64,7 @@ final class MovieDetailsViewControllerTests: XCTestCase {
 
 private func makeSut() throws -> MovieDetailsViewController {
     let sut = try XCTUnwrap(MovieDetailsViewController())
+    sut.castListView = CastListView(viewModel: MovieCastListViewModelStub())
     return sut
 }
 
@@ -76,17 +79,24 @@ private func makeMovieDetails() -> MovieDetails {
 
 
 
-private class MovieDetailsViewModelStub: MovieDetailsViewModeProtocol {
+private class MovieDetailsViewModelStub: MovieDetailViewModel {
     func getMovieID() -> Int {
         return 1
     }
     
-    var completion: ((Result<MovieDetails, NetworkError>) -> Void)?
+    var completion: ((Result<MovieDetails?, NetworkError>) -> Void)?
     var callCount: Int = 0
     
-    func getMovieDetails(completion: @escaping (Result<MovieDB.MovieDetails,
-                                                MovieDB.NetworkError>) -> Void) {
+    func getMovieDetails(completion: @escaping (Result<MovieDetails?, NetworkError>) -> Void) {
         callCount += 1
         self.completion = completion
     }
+}
+
+private class MovieCastListViewModelStub: CastViewModel {
+    func getMovieCast(completion: @escaping (Result<MovieDB.Person?, MovieDB.NetworkError>) -> Void) {
+        
+    }
+    
+    
 }

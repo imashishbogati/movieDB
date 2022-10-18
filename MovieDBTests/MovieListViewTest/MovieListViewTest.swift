@@ -39,7 +39,7 @@ final class MovieListViewTest: XCTestCase {
                               listType: .trending)
         XCTAssertEqual(sut.numberOfItemsInList(for: 0), 1)
         let cell = sut.listCell(for: 0)
-        XCTAssertEqual(cell?.titleLabel.text, "Test Orginal title")
+        XCTAssertEqual(cell?.titleLabel.text, "Test Original title")
     }
     
 }
@@ -57,7 +57,7 @@ extension MovieListView {
     }
 }
 
-private func makeSut(viewModel: MovieListViewModelProtocol = ListViewModelSpy(),
+private func makeSut(viewModel: MovieViewModel = ListViewModelSpy(),
                      listType: MovieListType = .trending) throws -> MovieListView {
     let listView = MovieListView(viewModel: viewModel,
                                  listType: listType)
@@ -69,7 +69,7 @@ private func makeMovieResult() -> Results {
                    backdrop_path: "/sbS8e0XBqSeNhJi3Ej1phqVnGCy.jpg",
                    id: 1,
                    original_language: "en",
-                   original_title: "Test Orginal title",
+                   original_title: "Test Original title",
                    overview: "test overviews",
                    popularity: 105.371,
                    poster_path: "/gPn9e8eP7TeKQU4IeWAMzOajR40.jpg",
@@ -85,25 +85,24 @@ private func makeMovieResponse() -> MovieListResponse {
                              results: [makeMovieResult()])
 }
 
-private class ListViewModelSpy: MovieListViewModelProtocol {
-    func getMovies(request: MovieListRequest,
-                   completion: @escaping (Result<MovieListResponse, NetworkError>) -> Void) {
+private class ListViewModelSpy: MovieViewModel {
+    
+    func getMovies(listType: MovieListType, page: String, completion: @escaping (Result<MovieListResponse?, NetworkError>) -> Void) {
         
     }
     
-    func listTitle(list: MovieDB.MovieListType) -> String {
+    func listTitle(listType list: MovieDB.MovieListType) -> String {
         return "test"
     }
 }
 
-private class ListViewModelStubs: MovieListViewModelProtocol {
+private class ListViewModelStubs: MovieViewModel {
     
-    func getMovies(request: MovieListRequest,
-                   completion: @escaping (Result<MovieListResponse, NetworkError>) -> Void) {
+    func getMovies(listType: MovieListType, page: String, completion: @escaping (Result<MovieListResponse?, NetworkError>) -> Void) {
         completion(.success(makeMovieResponse()))
     }
     
-    func listTitle(list: MovieDB.MovieListType) -> String {
+    func listTitle(listType list: MovieDB.MovieListType) -> String {
         return "test"
     }
 }

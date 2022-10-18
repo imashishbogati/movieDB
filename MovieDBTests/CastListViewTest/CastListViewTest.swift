@@ -51,7 +51,9 @@ final class CastListViewTest: XCTestCase {
     func test_getListWithFailureResponse_shouldNotRenderList() throws {
         let vm = MovieCastListViewModelStub()
         let sut = try makeSut(viewModel: vm)
-        vm.completion?(.failure(.noData))
+        vm.completion?(.failure(.init(forRequestURL: URL(string: "https:www.dummy.com")!,
+                                      errorMessage: "No Data",
+                                      forStatusCode: 200)))
         XCTAssertEqual(sut.numberOfItemsInList(for: 0), 0)
     }
 }
@@ -69,7 +71,7 @@ extension CastListView {
     }
 }
 
-private func makeSut(viewModel: CastListViewModeProtocol = MovieCastListViewModelSpy()) throws -> CastListView {
+private func makeSut(viewModel: CastViewModel = MovieCastListViewModelSpy()) throws -> CastListView {
     let sut = try XCTUnwrap(CastListView(viewModel: viewModel))
     return sut
 }
@@ -84,19 +86,19 @@ private func makePerson(id: Int) -> Person {
     return Person(id: id, cast: [makeCast()])
 }
 
-private class MovieCastListViewModelSpy: CastListViewModeProtocol {
+private class MovieCastListViewModelSpy: CastViewModel {
     
-    func getMovieCast(completion: @escaping (Result<Person, NetworkError>) -> Void) {
+    func getMovieCast(completion: @escaping (Result<Person?, NetworkError>) -> Void) {
         
     }
 }
 
-private class MovieCastListViewModelStub: CastListViewModeProtocol {
+private class MovieCastListViewModelStub: CastViewModel {
     
     var callCount: Int = 0
-    var completion: ((Result<Person, NetworkError>) -> Void)?
+    var completion: ((Result<Person?, NetworkError>) -> Void)?
     
-    func getMovieCast(completion: @escaping (Result<Person, NetworkError>) -> Void) {
+    func getMovieCast(completion: @escaping (Result<Person?, NetworkError>) -> Void) {
         callCount += 1
         self.completion = completion
     }

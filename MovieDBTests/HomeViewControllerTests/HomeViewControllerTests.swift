@@ -30,7 +30,9 @@ final class HomeViewControllerTests: XCTestCase {
     func test_movieListView_delegateMethodDidFailed_shouldShowAlert() throws {
         let sut = try makeSut()
         sut.loadViewIfNeeded()
-        sut.didFailed(error: .noData)
+        sut.didFailed(error: .init(forRequestURL: URL(string: "https:www.dummy.com")!,
+                                   errorMessage: "No Data",
+                                   forStatusCode: 200))
         XCTAssertEqual(sut.scrollView.isHidden, true)
         XCTAssertEqual(sut.navigationController?.topViewController?.contains(sut.emptyView), true)
     }

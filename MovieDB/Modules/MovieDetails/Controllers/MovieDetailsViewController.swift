@@ -77,7 +77,7 @@ class MovieDetailsViewController: UIViewController {
         backButton.title = ""
         navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         favouriteButton.addTarget(self, action: #selector(didTapFavouriteButton), for: .touchUpInside)
-        setupHiearchy()
+        setupHierarchy()
         setupLayout()
     }
     
@@ -95,7 +95,7 @@ class MovieDetailsViewController: UIViewController {
             case .failure(let error):
                 self.scrollView.isHidden = true
                 self.emptyView.retryButton.addTarget(self, action: #selector(self.didTapRetryButton), for: .touchUpInside)
-                self.emptyView.createEmptyView(title: error.localizedDescription, isRetryButtonHidden: true, viewController: self)
+                self.emptyView.createEmptyView(title: error.reason ?? "", isRetryButtonHidden: true, viewController: self)
             }
         })
     }
@@ -110,7 +110,7 @@ class MovieDetailsViewController: UIViewController {
         overViewDescriptionLabel.text = movieDetails?.overview ?? ""
     }
 
-    private func setupHiearchy() {
+    private func setupHierarchy() {
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
         contentView.addSubview(posterImageView)
