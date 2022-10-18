@@ -7,24 +7,18 @@
 
 import Foundation
 
-
-enum NetworkError: Error {
+struct NetworkError: Error {
+    let reason: String?
+    let httpStatusCode: Int?
+    let requestURL: URL?
+    let requestBody: String?
+    let serverResponse: String?
     
-    public enum RequestError {
-        case invalidRequest(URLRequest)
-        case encodingError(EncodingError)
-        case other(Error)
+    init(withServerResponse response: Data? = nil, forRequestURL url: URL, withHttpBody body: Data? = nil, errorMessage message: String, forStatusCode statusCode: Int) {
+        self.serverResponse = response != nil ? String(data: response!, encoding: .utf8) : nil
+        self.requestURL = url
+        self.requestBody = body != nil ? String(data: body!, encoding: .utf8) : nil
+        self.httpStatusCode = statusCode
+        self.reason = message
     }
-    
-    public enum ServerError {
-        case decodingError(DecodingError)
-        case noInternetConnection
-        case timeout
-        case internalServerError
-        case other(statusCode: Int, response: HTTPURLResponse)
-    }
-    
-    case noData
-    case requestError(RequestError)
-    case serverError(ServerError)
 }

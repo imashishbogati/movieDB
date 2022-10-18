@@ -18,11 +18,10 @@ class TabBarViewController: UITabBarController {
         setupViews()
     }
     
-    // MARK: - Private
     private func setupViews() {
         viewControllers = [
             createNavigationBar(controller: HomeFactory.make(), title: "Home", imageName: "house.fill"),
-            createNavigationBar(controller: FavouriteFactory.make(), title: "Favourite", imageName: "star.fill")
+            createNavigationBar(controller: FavoriteFactory.make(), title: "Favorite", imageName: "star.fill")
         ]
     }
     
@@ -30,10 +29,10 @@ class TabBarViewController: UITabBarController {
     private func createNavigationBar(controller: UIViewController,
                                      title: String,
                                      imageName: String) -> UIViewController {
-        let navigationContoller = UINavigationController(rootViewController: controller)
-        navigationContoller.tabBarItem.title = title
-        navigationContoller.tabBarItem.image = UIImage(named: imageName)?.withRenderingMode(.alwaysTemplate)
-        return navigationContoller
+        let navigationController = UINavigationController(rootViewController: controller)
+        navigationController.tabBarItem.title = title
+        navigationController.tabBarItem.image = UIImage(named: imageName)?.withRenderingMode(.alwaysTemplate)
+        return navigationController
     }
 
 }

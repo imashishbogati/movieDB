@@ -59,7 +59,7 @@ final class ActivityIndicator: UIView {
     }
     
     func hideIndicator() {
-        guarenteeMainThread {
+        guaranteeMainThread {
             if self.indicator.isAnimating {
                 self.indicator.stopAnimating()
             }

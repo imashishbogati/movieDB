@@ -12,13 +12,18 @@ extension URLSession: NetworkLoader {
                   with completion: @escaping (Data?, URLResponse?, NetworkError?) -> Void) {
         dataTask(with: request) { data, response, error in
             if let _ = error {
-                completion(nil, nil, NetworkError.requestError(.invalidRequest(request)))
+                completion(nil, nil, .init(withServerResponse: data,
+                                           forRequestURL: request.url!,
+                                           errorMessage: error?.localizedDescription ?? "",
+                                           forStatusCode: 200))
             }
             
             if let response = response as? HTTPURLResponse {
                 let statusCode = response.statusCode
                 if statusCode != 200 && statusCode < 300 {
-                    completion(nil, nil, NetworkError.serverError(.other(statusCode: statusCode, response: response)))
+                    completion(nil, nil, .init(forRequestURL: request.url!,
+                                               errorMessage: error?.localizedDescription ?? "",
+                                               forStatusCode: statusCode))
                 }
             }
             

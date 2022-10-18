@@ -7,11 +7,9 @@
 
 import Foundation
 
-// MARK: - DecoderHelper
-
-final class DecoderHelper {
+class DecoderHelper {
     
-    static var shared = DecoderHelper()
+    static let shared = DecoderHelper()
     
     private init() { }
     

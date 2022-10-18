@@ -7,10 +7,8 @@
 
 import Foundation
 
-// MARK: - EncoderHelper
-
-final class EncoderHelper {
-    static var shared = EncoderHelper()
+class EncoderHelper {
+    static let shared = EncoderHelper()
     
     private init() { }
     

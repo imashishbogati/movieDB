@@ -7,7 +7,7 @@
 
 import Foundation
 
-func guarenteeMainThread(_ work: @escaping () -> Void) {
+func guaranteeMainThread(_ work: @escaping () -> Void) {
     if Thread.isMainThread {
         work()
     } else {
