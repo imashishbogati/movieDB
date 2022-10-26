@@ -6,5 +6,6 @@
 //
 
 protocol MovieDetailService {
-    func getMovieDetail(movieID: Int, completion: @escaping (Result<MovieDetails?, NetworkError>) -> Void)
+    func getMovieDetail(movieID: Int,
+                        completion: @escaping (Result<MovieDetails?, NetworkError>) -> Void)
 }
